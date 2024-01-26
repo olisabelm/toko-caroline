@@ -16,6 +16,7 @@ if ($jumlah_user == 1) {
     if ($password_benar) {
         session_start();
 
+        $_SESSION["id"] = $user["id"];
         $_SESSION["username"] = $user["username"];
         $_SESSION["level"] = $user["level"];
 

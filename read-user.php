@@ -17,7 +17,7 @@
 
 	$id = $_GET["id"];
 
-	$sql = "SELECT * FROM user WHERE id = '$id";
+	$sql = "SELECT * FROM user WHERE id = '$id'";
 	$query = mysqli_query($koneksi, $sql);
 
 	$user = mysqli_fetch_array($query);
@@ -51,7 +51,7 @@
 				</tr>
 				<tr>
 					<td colspan="2">
-						<button type="submit">EDIT</button>
+						<button type="submit">SIMPAN</button>
 						<button type="reset">RESET</button>
 					</td>
 				</tr>
