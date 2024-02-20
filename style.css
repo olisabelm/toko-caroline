@@ -1,6 +1,20 @@
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('Poppins-Regular.eot');
+  src: url('Poppins-Regular.eot?#iefix') format('embedded-opentype'),
+      url('Poppins-Regular.woff2') format('woff2'),
+      url('Poppins-Regular.woff') format('woff'),
+      url('Poppins-Regular.ttf') format('truetype'),
+      url('Poppins-Regular.svg#Poppins-Regular') format('svg');
+  font-weight: 900;
+  font-style: normal;
+  font-display: normal;
+}
+
 body {
   font-family: "Poppins", sans-serif;
-  background-color: linear-gradient(#30142b, #a12727);
+  background-color: #577590;
   margin: 0;
   padding: 0;
 }
@@ -57,4 +71,67 @@ td {
 
 .clear-button {
   background-color: #b22222;
+}
+
+nav {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul li {
+  position: relative;
+  padding: 0 10px;
+}
+
+nav ul li a {
+  display: block;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+nav ul li:hover > ul {
+  display: block;
+}
+
+nav ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  padding: 10px;
+  width: 150px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 0 0 5px 5px;
+}
+
+nav ul ul li {
+  display: block;
+  padding: 5px 0;
+}
+
+nav ul ul li a {
+  padding: 5px;
+  font-family: 'Poppins', sans-serif;
+}
+
+nav ul li ul li {
+  display: block;
+}
+
+nav ul li ul li a {
+  padding: 5px;
+  font-family: 'Poppins', sans-serif;
 }
