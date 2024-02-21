@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Penjualan</title>
+    <title>Fresh Box</title>
 </head>
 
 <body>

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Pembelian</title>
+    <title>Fresh Box</title>
 </head>
 
 <body>

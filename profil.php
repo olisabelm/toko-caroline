@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Profil</title>
+    <title>Fresh Box</title>
 </head>
 
 <body>
