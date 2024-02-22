@@ -41,13 +41,12 @@
         </form>
         <div class="table-responsive mt-3">
             <table class="table table-bordered table-striped">
-                <thead class="table-dark">
+                <thead class="table-success">
                     <tr>
                         <th scope="col">No.</th>
                         <th scope="col">Nama</th>
                         <th scope="col">Kategori</th>
                         <th scope="col">Stok</th>
-                        <th scope="col">Harga Beli</th>
                         <th scope="col">Harga Jual</th>
                         <th scope="col">Dibuat Pada</th>
                         <th scope="col">Diubah Pada</th>
@@ -62,7 +61,6 @@
                             <td><?= $barang["nama"] ?></td>
                             <td><?= $barang["kategori"] ?></td>
                             <td><?= $barang["stok"] ?></td>
-                            <td><?= $barang["harga_beli"] ?></td>
                             <td><?= $barang["harga_jual"] ?></td>
                             <td><?= $barang["created_at"] ?></td>
                             <td><?= $barang["updated_at"] ?></td>

@@ -4,16 +4,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Barang</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <title>Fresh Box</title>
     <style>
         /* Center the form */
         .container {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            height: 90vh;
+        }
+
+        /* Form styling */
+        .form {
+            max-width: 500px;
+            width: 100%;
+            padding: 20px;
+            border: 1px solid #ced4da;
+            border-radius: 10px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form label {
+            font-weight: bold;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .form-select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 8px;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            color: #ffffff;
+        }
+
+        .btn-secondary {
+            background-color: #6c757d;
+            color: #ffffff;
         }
     </style>
 </head>
@@ -29,50 +86,33 @@
     ?>
 
     <div class="container">
-        <form action="create-barang.php" method="POST" class="p-5 border rounded-3">
-            <h1 class="mb-4">Tambah Barang</h1>
-            <div class="mb-3 row">
-                <label for="nama" class="col-sm-2 col-form-label">Nama</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="nama" name="nama" required>
-                </div>
+        <form action="create-barang.php" method="POST" class="form">
+            <h1>Tambah Barang</h1>
+            <div class="mb-3">
+                <label for="nama">Nama</label>
+                <input type="text" class="form-control" id="nama" name="nama" required>
             </div>
-            <div class="mb-3 row">
-                <label for="kategori" class="col-sm-2 col-form-label">Kategori</label>
-                <div class="col-sm-10">
-                    <select class="form-select" id="kategori" name="kategori" required>
-                        <option value="makanan">Makanan</option>
-                        <option value="minuman">Minuman</option>
-                    </select>
-                </div>
+            <div class="mb-3">
+                <label for="kategori">Kategori</label>
+                <select class="form-select" id="kategori" name="kategori" required>
+                    <option value="makanan">Makanan</option>
+                    <option value="minuman">Minuman</option>
+                </select>
             </div>
-            <div class="mb-3 row">
-                <label for="stok" class="col-sm-2 col-form-label">Stok</label>
-                <div class="col-sm-10">
-                    <input type="number" class="form-control" id="stok" name="stok" min="0" required>
-                </div>
+            <div class="mb-3">
+                <label for="stok">Stok</label>
+                <input type="number" class="form-control" id="stok" name="stok" min="0" required>
             </div>
-            <div class="mb-3 row">
-                <label for="harga_beli" class="col-sm-2 col-form-label">Harga Beli</label>
-                <div class="col-sm-10">
-                    <input type="number" class="form-control" id="harga_beli" name="harga_beli" min="0" required>
-                </div>
-            </div>
-            <div class="mb-3 row">
-                <label for="harga_jual" class="col-sm-2 col-form-label">Harga Jual</label>
-                <div class="col-sm-10">
-                    <input type="number" class="form-control" id="harga_jual" name="harga_jual" min="0" required>
-                </div>
+            <div class="mb-3">
+                <label for="harga_jual">Harga Jual</label>
+                <input type="text" class="form-control" id="harga_jual" name="harga_jual" required>
             </div>
             <div class="text-center">
-                <button type="submit" class="btn btn-primary me-2">SIMPAN</button>
+                <button type="submit" class="btn btn-primary">SIMPAN</button>
                 <button type="reset" class="btn btn-secondary">RESET</button>
             </div>
         </form>
     </div>
-
-    <!-- Bootstrap Bundle with Popper -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

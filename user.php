@@ -51,8 +51,8 @@
                         <th>No.</th>
                         <th>Username</th>
                         <th>Level</th>
-                        <th>Dibuat pada</th>
-                        <th>Diubah pada</th>
+                        <th>Tanggal buat</th>
+                        <th>Tanggal ubah</th>
                         <th colspan="2">Aksi</th>
                     </tr>
                 </thead>

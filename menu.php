@@ -10,24 +10,13 @@
   
   <!-- Custom Fonts -->
   <style>
-    @font-face {
-      font-family: "Poppins";
-      src: url("Poppins-Regular.eot");
-      src: url("Poppins-Regular.eot?#iefix") format("embedded-opentype"),
-           url("Poppins-Regular.woff2") format("woff2"),
-           url("Poppins-Regular.woff") format("woff"),
-           url("Poppins-Regular.ttf") format("truetype"),
-           url("Poppins-Regular.svg#Poppins-Regular") format("svg");
-      font-weight: 900;
-      font-style: normal;
-      font-display: normal;
-    }
     
     /* Apply font family to navbar elements */
     .navbar-brand,
     .navbar-nav .nav-link {
       font-family: "Poppins", sans-serif; 
       color: white;
+      font-size: 15px; 
     }
 
     .custom-navbar {
@@ -74,7 +63,6 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="transaksiDropdown">
               <li><a class="dropdown-item" href="penjualan.php">Penjualan</a></li>
-              <li><a class="dropdown-item" href="pembelian.php">Pembelian</a></li>
             </ul>
           </li>
         </ul>

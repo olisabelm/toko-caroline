@@ -31,14 +31,14 @@
                 <form action="update-barang.php" method="POST">
                     <input type="hidden" name="id" value="<?= $id ?>">
                     <div class="mb-3 row">
-                        <label for="nama" class="col-sm-2 col-form-label">Nama</label>
-                        <div class="col-sm-10">
+                        <label for="nama" class="col-sm-3 col-form-label">Nama</label>
+                        <div class="col-sm-9">
                             <input type="text" class="form-control" id="nama" name="nama" value="<?= $barang["nama"] ?>">
                         </div>
                     </div>
                     <div class="mb-3 row">
-                        <label for="kategori" class="col-sm-2 col-form-label">Kategori</label>
-                        <div class="col-sm-10">
+                        <label for="kategori" class="col-sm-3 col-form-label">Kategori</label>
+                        <div class="col-sm-9">
                             <select class="form-select" id="kategori" name="kategori">
                                 <option value="makanan" <?= $barang["kategori"] == "makanan" ? "selected" : "" ?>>Makanan</option>
                                 <option value="minuman" <?= $barang["kategori"] == "minuman" ? "selected" : "" ?>>Minuman</option>
@@ -46,20 +46,14 @@
                         </div>
                     </div>
                     <div class="mb-3 row">
-                        <label for="stok" class="col-sm-2 col-form-label">Stok</label>
-                        <div class="col-sm-10">
+                        <label for="stok" class="col-sm-3 col-form-label">Stok</label>
+                        <div class="col-sm-9">
                             <input type="number" class="form-control" id="stok" name="stok" value="<?= $barang["stok"] ?>">
                         </div>
                     </div>
                     <div class="mb-3 row">
-                        <label for="harga_beli" class="col-sm-2 col-form-label">Harga Beli</label>
-                        <div class="col-sm-10">
-                            <input type="number" class="form-control" id="harga_beli" name="harga_beli" value="<?= $barang["harga_beli"] ?>">
-                        </div>
-                    </div>
-                    <div class="mb-3 row">
-                        <label for="harga_jual" class="col-sm-2 col-form-label">Harga Jual</label>
-                        <div class="col-sm-10">
+                        <label for="harga_jual" class="col-sm-3 col-form-label">Harga Jual</label>
+                        <div class="col-sm-9">
                             <input type="number" class="form-control" id="harga_jual" name="harga_jual" value="<?= $barang["harga_jual"] ?>">
                         </div>
                     </div>
