@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>New Pelanggan</title>
+    <title>Fresh Box</title>
 </head>
 
 <body>
@@ -10,14 +10,12 @@
 
     <?php
     if ($_SESSION["level"] != "admin" && $_SESSION["level"] != "logistik") {
-        // jika di sesi ini levelnya bukan admin atau bukan logistik, akses ditolak
         echo "Anda tidak dapat mengakses halaman ini";
         exit;
     }
     ?>
 
     <div>
-        <!-- atribut barang dikirim ke create-barang.php -->
         <form action="create-pelanggan.php" method="POST">
             <h1>Tambah Pelanggan</h1>
             <table>
@@ -27,11 +25,11 @@
                 </tr>
                 <tr>
                     <td>Alamat</td>
-                    <td><input type="text" name="alamat"></td>
+                    <td><input type="number" min="0" name="stok"></td>
                 </tr>
                 <tr>
                     <td>Nomor Telepon</td>
-                    <td><input type="text" name="nomor_telepon"></td>
+                    <td><input type="number" min="0" name="harga_beli"></td>
                 </tr>
                 <tr>
                     <td colspan="2">
