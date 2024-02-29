@@ -2,24 +2,85 @@
 <html>
 
 <head>
-    <title>Fresh Box</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data User</title>
     <style>
         body {
-            background-color: #f0f8ea; /* Warna latar belakang hijau muda */
+            font-family: "Poppins", sans-serif;
+            padding: 0;
+        }
+
+        h1 {
+            color: #333;
+        }
+        
+        .body-container {
+            padding: 0 30px;
+        }
+
+        navbar {
+            padding: 0;
         }
 
         .table {
-            background-color: #fff; /* Warna latar belakang putih */
+            width: 100%;
+            border-collapse: collapse;
         }
 
-        .table-striped tbody tr:nth-of-type(odd) {
-            background-color: #f3f7f4; /* Warna latar belakang untuk baris ganjil */
+        th,
+        td {
+            padding: 10px;
+            border: 1px solid #ddd;
         }
 
-        .table-hover tbody tr:hover {
-            background-color: #ebf5e6; /* Warna latar belakang saat hover */
+        th {
+            background-color: #4CAF50;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #e6e6e6;
+        }
+
+        .title-container {
+            margin-bottom: 20px;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+        .btn-container {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        /* Add, Edit, and Delete buttons */
+        .btn-custom {
+            padding: 5px 10px;
+            font-size: 14px;
+            border-radius: 5px;
+            margin-right: 5px;
+        }
+
+        .btn-view {
+            background-color: #3e7e55;
+            color: white;
+        }
+
+        .btn-lihat {
+            background-color: #606c38;
+            color: white;
+        }
+
+        .btn-delete {
+            background-color: #283618;
+            color: white;
         }
     </style>
 </head>
@@ -39,21 +100,26 @@
     $query = mysqli_query($koneksi, $sql);
     ?>
 
-    <div class="container mt-4">
-        <h1 class="mb-4">Data User</h1>
-        <form action="new-user.php" method="GET">
-            <button type="submit" class="btn btn-success mb-3">Tambah</button>
-        </form>
-        <div class="table-responsive">
-            <table class="table table-striped table-hover">
-                <thead class="table-dark">
-                    <tr>
-                        <th>No.</th>
-                        <th>Username</th>
-                        <th>Level</th>
-                        <th>Tanggal buat</th>
-                        <th>Tanggal ubah</th>
-                        <th colspan="2">Aksi</th>
+<div class="body-container"> 
+        <div class="container">
+            <div class="title-container">
+                <h1 class="mb-3">Data User</h1>
+            </div>
+            <div class="btn-container">
+                <form action="new-user.php" method="GET">
+                    <button type="submit" class="btn btn-primary btn-custom btn-view">Tambah</button>
+                </form>
+            </div>
+            <div class="table-responsive table-custom">
+                <table class="table table-bordered table-striped">
+                    <thead class="table-success">
+                        <tr>
+                        <th scope="col">No.</th>
+                        <th scope="col">Username</th>
+                        <th scope="col">Level</th>
+                        <th scope="col">Tanggal buat</th>
+                        <th scope="col">Tanggal ubah</th>
+                        <th scope="col" colspan="2">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -67,14 +133,14 @@
                             <td><?= $user["updated_at"] ?></td>
                             <td>
                                 <form action="read-user.php" method="GET">
-                                    <input type="hidden" name="id" value='<?= $user["id"] ?>'>
-                                    <button type="submit" class="btn btn-primary">Lihat</button>
-                                </form>
+                                    <input type="hidden" name="id" value="<?= $user["id"] ?>">
+                                    <button type="submit" class="btn btn-warning btn-custom btn-lihat">Lihat</button>
+                                 </form>
                             </td>
                             <td>
                                 <form action="delete-user.php" method="POST" onsubmit="return konfirmasi(this)">
-                                    <input type="hidden" name="id" value='<?= $user["id"] ?>'>
-                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                    <input type="hidden" name="id" value="<?= $user["id"] ?>">
+                                    <button type="submit" class="btn btn-danger btn-custom btn-delete">Delete</button>
                                 </form>
                             </td>
                         </tr>
@@ -91,8 +157,6 @@
             return confirm(`Hapus user '${id}'?`);
         }
     </script>
-    <!-- Bootstrap Bundle with Popper -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

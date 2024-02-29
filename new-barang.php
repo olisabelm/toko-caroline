@@ -95,8 +95,9 @@
             <div class="mb-3">
                 <label for="kategori">Kategori</label>
                 <select class="form-select" id="kategori" name="kategori" required>
-                    <option value="makanan">Makanan</option>
-                    <option value="minuman">Minuman</option>
+                    <option value="tanaman_hias">Tanaman Hias</option>
+                    <option value="tanaman_aromatik">Tanaman Aromatik</option>
+                    <option value="tanaman_herbal">Tanaman Herbal</option>
                 </select>
             </div>
             <div class="mb-3">
@@ -104,8 +105,8 @@
                 <input type="number" class="form-control" id="stok" name="stok" min="0" required>
             </div>
             <div class="mb-3">
-                <label for="harga_jual">Harga Jual</label>
-                <input type="text" class="form-control" id="harga_jual" name="harga_jual" required>
+                <label for="harga_jual">Harga</label>
+                <input type="text" class="form-control" id="harga" name="harga" required>
             </div>
             <div class="text-center">
                 <button type="submit" class="btn btn-primary">SIMPAN</button>

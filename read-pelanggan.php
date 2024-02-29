@@ -14,11 +14,9 @@
 
     $id = $_GET["id"];
 
-    // cari barang yang memiliki id tersebut
     $sql = "SELECT * FROM pelanggan WHERE id = '$id'";
     $query = mysqli_query($koneksi, $sql);
 
-    // ambil data barang
     $pelanggan = mysqli_fetch_array($query);
     ?>
 
@@ -26,7 +24,6 @@
         <form action="update-pelanggan.php" method="POST">
             <h1>Lihat Pelanggan</h1>
 
-            <!-- id barang disembunyikan untuk keperluan update -->
             <input type="hidden" name="id" value="<?= $id ?>">
 
             <table>

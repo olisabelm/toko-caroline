@@ -10,61 +10,100 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #577590;
   margin: 0;
   padding: 0;
 }
 
-.container {
+section {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
+  width: 100%;
+  background: url("login0.webp") no-repeat center/cover;
 }
 
-.login-form {
-  background-color: #ffffff;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.form-box {
+  position: relative;
+  width: 400px;
+  height: 450px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-h1 {
+h2 {
+  font-size: 2em;
+  color: white;
   text-align: center;
 }
 
-table {
-  width: 100%;
-}
-
-td {
-  padding: 8px;
-  text-align: right;
+.form-group {
+  position: relative;
+  margin: 30px 0;
+  width: 310px;
+  height: 50px;
+  display: flex;
+  align-items: center;
 }
 
 .input-field {
   width: 100%;
-  padding: 8px;
-  box-sizing: border-box;
+  height: 50px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  padding: 0 5px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.input-field:focus {
+  border-bottom: 2px solid #fff;
+}
+
+.form-group label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: #fff;
+  font-size: 1em;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: 0.5s;
+}
+
+.form-group input:focus ~ label,
+.form-group input:valid ~ label,
+.form-group input:not(:placeholder-shown) ~ label {
+  top: -25px;
+  font-size: 0.8em;
 }
 
 .button-container {
-  text-align: center;
-  padding-top: 16px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .login-button,
 .clear-button {
-  padding: 8px 16px;
-  margin-right: 8px;
-  cursor: pointer;
-  background-color: #748c76;
+  width: 150px;
+  height: 50px;
+  background-color: transparent;
+  border: 2px solid #fff;
   color: #fff;
-  border: none;
-  border-radius: 4px;
-  animation: btn-anim1 1s linear infinite;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.clear-button {
-  background-color: #b22222;
+.login-button:hover,
+.clear-button:hover {
+  background-color: #fff;
+  color: #000;
 }

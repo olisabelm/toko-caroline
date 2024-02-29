@@ -1,34 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fresh Box</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div class="container">
+    <section>
+    <div class="form-box">
+        <div class="form-value">
         <form action="validasi.php" method="POST" class="login-form">
-            <h1>Selamat Datang!</h1>
-            <table>
-                <tr>
-                    <td>Username</td>
-                    <td><input type="text" name="username" class="input-field"></td>
-                </tr>
-                <tr>
-                    <td>Password</td>
-                    <td><input type="password" name="password" class="input-field"></td>
-                </tr>
-                <tr>
-                    <td colspan="2" class="button-container">
-                        <button type="submit" class="login-button">LOGIN</button>
-                        <button type="reset" class="clear-button">CLEAR</button>
-                    </td>
-                </tr>
-            </table>
+            <h2>Welcome!</h2>
+            <div class="form-group">
+              <input type="text" id="username" name="username" spellcheck="false" required placeholder="Username" autocomplete="off" class="input-field" />
+              <label for="username">Username</label>
+            </div>
+            <div class="form-group">
+              <input type="password" id="password" name="password" required placeholder="Password" autocomplete="off" class="input-field" />
+              <label for="password">Password</label>
+            </div>
+            <div class="button-container">
+               <button type="submit" class="login-button">LOGIN</button>
+               <button type="reset" class="clear-button">CLEAR</button>
+            </div>
         </form>
+        </div>
     </div>
+    </section>
+
 </body>
 </html>
