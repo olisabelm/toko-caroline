@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 22, 2024 at 06:14 PM
+-- Generation Time: Feb 29, 2024 at 04:19 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -30,9 +30,9 @@ SET time_zone = "+00:00";
 CREATE TABLE `barang` (
   `id` int(11) UNSIGNED NOT NULL,
   `nama` varchar(50) NOT NULL,
-  `kategori` enum('makanan','minuman') NOT NULL,
+  `kategori` enum('tanaman hias','tanaman aromatik','tanaman herbal') NOT NULL,
   `stok` int(10) UNSIGNED NOT NULL,
-  `harga_jual` int(10) UNSIGNED NOT NULL,
+  `harga` int(10) UNSIGNED NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
@@ -41,17 +41,16 @@ CREATE TABLE `barang` (
 -- Dumping data for table `barang`
 --
 
-INSERT INTO `barang` (`id`, `nama`, `kategori`, `stok`, `harga_jual`, `created_at`, `updated_at`) VALUES
-(1, 'Palem Merah', 'makanan', 10, 50000, '2024-01-25 01:10:40', '2024-02-22 04:11:01'),
-(2, 'Lidah mertua', 'makanan', 10, 20000, '2024-01-25 01:10:40', '2024-02-22 04:10:56'),
-(3, 'Monstera', 'makanan', 5, 100000, '2024-01-25 01:10:40', '2024-02-22 04:10:52'),
-(4, 'Rombusa Mini', 'makanan', 10, 50000, '2024-01-25 01:10:40', '2024-02-22 04:11:12'),
-(5, 'Lili Paris', 'makanan', 5, 30000, '2024-01-25 01:10:40', '2024-02-22 04:11:20'),
-(8, 'Philodendron', 'minuman', 10, 75000, '2024-02-15 17:04:48', '2024-02-22 04:12:37'),
-(9, 'Kuping gajah', 'minuman', 12, 125000, '2024-02-15 17:04:48', '2024-02-22 04:12:59'),
-(10, 'Aglaonema', 'minuman', 10, 20000, '2024-02-15 17:04:48', '2024-02-22 04:01:23'),
-(11, 'Suplir', 'minuman', 20, 55000, '2024-02-15 17:04:48', '2024-02-22 04:13:13'),
-(12, 'Tanduk Rusa', 'minuman', 15, 140000, '2024-02-15 17:04:48', '2024-02-22 04:13:27');
+INSERT INTO `barang` (`id`, `nama`, `kategori`, `stok`, `harga`, `created_at`, `updated_at`) VALUES
+(1, 'Palem Merah', 'tanaman hias', 10, 50000, '2024-01-25 01:10:40', '2024-02-28 10:26:56'),
+(2, 'Lidah mertua', 'tanaman hias', 10, 20000, '2024-01-25 01:10:40', '2024-02-28 10:27:05'),
+(3, 'Monstera', 'tanaman hias', 5, 100000, '2024-01-25 01:10:40', '2024-02-28 10:27:15'),
+(4, 'Rombusa Mini', 'tanaman hias', 10, 50000, '2024-01-25 01:10:40', '2024-02-28 10:27:21'),
+(5, 'Lili Paris', 'tanaman hias', 5, 30000, '2024-01-25 01:10:40', '2024-02-28 10:27:29'),
+(8, 'Philodendron', 'tanaman hias', 10, 75000, '2024-02-15 17:04:48', '2024-02-28 10:27:36'),
+(9, 'Kuping gajah', 'tanaman hias', 12, 125000, '2024-02-15 17:04:48', '2024-02-28 10:27:43'),
+(10, 'Aglaonema', 'tanaman hias', 10, 20000, '2024-02-15 17:04:48', '2024-02-28 10:27:56'),
+(11, 'Suplir', 'tanaman hias', 20, 55000, '2024-02-15 17:04:48', '2024-02-28 10:28:07');
 
 -- --------------------------------------------------------
 
@@ -130,7 +129,7 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `username`, `password`, `level`, `created_at`, `updated_at`) VALUES
 (1, 'cici', '$2a$12$iMJZjnl5ve4Kcxf97vXVMOz7dxv94C6hUWga8J1AwosdclyIGuJPy', 'logistik', '2024-01-25 01:07:04', NULL),
-(2, 'nana', '$2a$12$nFxGZ7B2QJuBEQWjKcqXXOturxi.K31Lp.bp8fcKu6H6dMMJysIAy', 'admin', '2024-01-25 01:07:04', NULL),
+(2, 'nana', '$2a$12$UBmaRoTAND4gJPHMOwDxveUFzaMU9EVe4hyYwjvXr/BWDUePrgyn2', 'admin', '2024-01-25 01:07:04', '2024-02-24 04:13:44'),
 (3, 'nini', '$2a$12$bKKLhL7sxsXjRioXiMRxm.x8oydLNGh89xnhRGjIsUh/iJ18s6mee', 'keuangan', '2024-01-25 01:07:04', NULL),
 (4, 'coco', '$2y$10$0hTMDRP/nv51MPnbcbgw3.eFANgrUhUsE8V25XJKCtGlppZXywIZy', 'admin', '2024-01-25 01:07:04', '2024-01-26 01:10:17'),
 (5, 'nene', '$2a$12$WbSLRWycU/I1FGOFYsEcrehrC/htvflUFudcLUj4cVoEshcsWLifC', 'logistik', '2024-01-25 01:07:04', NULL),
