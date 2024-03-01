@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html>
 
@@ -18,6 +21,16 @@
         /* Warna latar belakang untuk baris ganjil */
         .table tbody tr:nth-child(odd) {
             background-color: #f2f2f2;
+        }
+
+        @media print {
+            body {
+                margin: 0px
+            }
+
+            button {
+                display: none;
+            }
         }
     </style>
 </head>

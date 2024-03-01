@@ -116,14 +116,17 @@
         display: block;
       }
     }
+
+    @media print {
+      nav {
+        display: none;
+      }
+    }
   </style>
 </head>
 <body>
   <?php
-    session_start();
-
     if (!array_key_exists("username", $_SESSION)) {
-        // jika di sesi ini tidak ada username yang aktif, proses ke logout
         header("location:logout.php");
     }
   ?>
@@ -168,7 +171,7 @@
             <li><a class="dropdown-item" href="logout.php">Log out</a></li>
           </ul>
         </li>
-      </ul>
+      </ul> 
     </div>
   </nav>
 

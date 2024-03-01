@@ -89,11 +89,6 @@
             button {
                 display: none;
             }
-
-            th:last-child,
-            td:last-child {
-                display: none;
-            }
         }
     </style>
 </head>
@@ -118,9 +113,6 @@
                 <form action="new-barang.php" method="GET">
                     <button type="submit" class="btn btn-primary btn-custom btn-view">Tambah</button>
                 </form>
-                <!-- <form action="cetak-barang.php" method="GET"> -->
-                     <button onclick="cetak()"><a target="_blank href="cetak-barang.php" class="btn btn-primary btn-custom btn-view">Cetak</a></button>
-                <!-- </form> -->
             </div>
             <div class="table-responsive table-custom">
                 <table class="table table-bordered table-striped">
@@ -168,11 +160,11 @@
         </div>
     </div>
 
-    <script>
-        function cetak() {
-             window.print();
-        }
+    <script type="text/javascript">
+        window.print();
+    </script>
 
+    <script>
         function konfirmasi(form) {
             formData = new FormData(form);
             id = formData.get("id");
