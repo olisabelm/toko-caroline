@@ -7,8 +7,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Read Penjualan</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Fresh Box</title>
+    <link rel="stylesheet" href="formstyle.css">
 </head>
 
 <body>
@@ -25,43 +25,34 @@
     $penjualan = mysqli_fetch_array($query);
     ?>
 
-    <div class="container mt-5">
-        <h1 class="mb-4">Lihat Penjualan</h1>
-        <form>
-            <div class="mb-3 row">
-                <label for="namaBarang" class="col-sm-2 col-form-label">Nama Barang</label>
-                <div class="col-sm-10">
-                    <input readonly type="text" class="form-control" id="namaBarang" value="<?= $penjualan["nama_barang"] ?>">
-                </div>
+    <div class="container">
+        <div class="card mt-5">
+            <div class="card-body">
+                <form action="update-barang.php" method="POST" class="form">
+                    <h1>Lihat Penjualan</h1>
+                    <div class="mb-3 row">
+                        <label for="namaBarang" class="col-sm-2 col-form-label">Nama Barang</label>
+                            <input readonly type="text" class="form-control" id="namaBarang" value="<?= $penjualan["nama_barang"] ?>">
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="jumlah" class="col-sm-2 col-form-label">Jumlah</label>
+                            <input readonly type="text" class="form-control" id="jumlah" value="<?= $penjualan["jumlah"] ?>">
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="totalHarga" class="col-sm-2 col-form-label">Total Harga</label>
+                            <input readonly type="text" class="form-control" id="totalHarga" value="<?= $penjualan["total_harga"] ?>">
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="diinputOleh" class="col-sm-2 col-form-label">Diinput Oleh</label>
+                            <input readonly type="text" class="form-control" id="diinputOleh" value="<?= $penjualan["username"] ?>">
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="waktu" class="col-sm-2 col-form-label">Waktu</label>
+                            <input readonly type="text" class="form-control" id="waktu" value="<?= $penjualan["created_at"] ?>">
+                    </div>
+                </form>
             </div>
-            <div class="mb-3 row">
-                <label for="jumlah" class="col-sm-2 col-form-label">Jumlah</label>
-                <div class="col-sm-10">
-                    <input readonly type="text" class="form-control" id="jumlah" value="<?= $penjualan["jumlah"] ?>">
-                </div>
-            </div>
-            <div class="mb-3 row">
-                <label for="totalHarga" class="col-sm-2 col-form-label">Total Harga</label>
-                <div class="col-sm-10">
-                    <input readonly type="text" class="form-control" id="totalHarga" value="<?= $penjualan["total_harga"] ?>">
-                </div>
-            </div>
-            <div class="mb-3 row">
-                <label for="diinputOleh" class="col-sm-2 col-form-label">Diinput Oleh</label>
-                <div class="col-sm-10">
-                    <input readonly type="text" class="form-control" id="diinputOleh" value="<?= $penjualan["username"] ?>">
-                </div>
-            </div>
-            <div class="mb-3 row">
-                <label for="waktu" class="col-sm-2 col-form-label">Waktu</label>
-                <div class="col-sm-10">
-                    <input readonly type="text" class="form-control" id="waktu" value="<?= $penjualan["created_at"] ?>">
-                </div>
-            </div>
-        </form>
+        </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>

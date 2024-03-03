@@ -8,9 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fresh Box</title>
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel ="stylesheet" href="formstyle.css">
 </head>
 
 <body>
@@ -37,8 +35,8 @@
             <div class="col-md-4"> <!-- Ubah col-md-6 menjadi col-md-4 -->
                 <div class="card">
                     <div class="card-body">
+                        <form action="update-user.php" method="POST" class="form">
                         <h1 class="text-center mb-4">Lihat User</h1>
-                        <form action="update-user.php" method="POST">
                             <input type="hidden" name="id" value="<?= $id ?>">
                             <input type="hidden" name="old_password" value="<?= $user["password"] ?>">
                             <div class="mb-3">
@@ -67,9 +65,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Bootstrap Bundle with Popper -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

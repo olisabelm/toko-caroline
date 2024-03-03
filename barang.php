@@ -8,94 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Barang</title>
-    <style>
-        body {
-            font-family: "Poppins", sans-serif;
-            padding: 0; 
-        }
-
-        .body-container {
-            padding: 0 30px; 
-        }
-
-        navbar {
-            padding: 0; 
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        th,
-        td {
-            padding: 10px;
-            border: 1px solid #ddd;
-        }
-
-        th {
-            background-color: #4CAF50;
-            color: white;
-        }
-
-        tr:nth-child(odd) {
-            background-color: #f2f2f2;
-        }
-
-        tr:hover {
-            background-color: #e6e6e6;
-        }
-
-        .title-container {
-            margin-bottom: 20px;
-            margin-top: 20px;
-            font-size: 16px;
-        }
-
-        .btn-container {
-            margin-bottom: 20px;
-            display: flex;
-            justify-content: flex-start;
-        }
-
-        /* Add, Edit, and Delete buttons */
-        .btn-custom {
-            padding: 5px 10px;
-            font-size: 14px;
-            border-radius: 5px;
-            margin-right: 5px;
-        }
-
-        .btn-view {
-            background-color: #3e7e55;
-            color: white;
-        }
-
-        .btn-lihat {
-            background-color: #606c38;
-            color: white;
-        }
-
-        .btn-delete {
-            background-color: #283618;
-            color: white;
-        }
-
-        @media print {
-            body {
-                margin: 0px
-            }
-
-            button {
-                display: none;
-            }
-
-            th:last-child,
-            td:last-child {
-                display: none;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="tablestyle.css">
 </head>
 
 <body>
@@ -119,7 +32,7 @@
                     <button type="submit" class="btn btn-primary btn-custom btn-view">Tambah</button>
                 </form>
                 <!-- <form action="cetak-barang.php" method="GET"> -->
-                     <button onclick="cetak()"><a target="_blank href="cetak-barang.php" class="btn btn-primary btn-custom btn-view">Cetak</a></button>
+                     <button onclick="cetak()"><a target="_blank" href="cetak-barang.php" class="btn btn-primary btn-custom btn-view">Cetak</a></button>
                 <!-- </form> -->
             </div>
             <div class="table-responsive table-custom">

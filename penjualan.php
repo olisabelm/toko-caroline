@@ -6,32 +6,7 @@
 
 <head>
     <title>Fresh Box</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* Optional: Custom styling */
-        .container {
-            padding-top: 20px;
-        }
-
-        h1 {
-            margin-bottom: 20px;
-        }
-
-        /* Warna latar belakang untuk baris ganjil */
-        .table tbody tr:nth-child(odd) {
-            background-color: #f2f2f2;
-        }
-
-        @media print {
-            body {
-                margin: 0px
-            }
-
-            button {
-                display: none;
-            }
-        }
     </style>
 </head>
 
@@ -99,9 +74,6 @@
             return confirm(`Hapus penjualan '${id}'?`);
         }
     </script>
-
-    <!-- Bootstrap Bundle with Popper -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

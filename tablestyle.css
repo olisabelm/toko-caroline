@@ -1,0 +1,91 @@
+body {
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+}
+
+.body-container {
+  padding: 0 30px;
+}
+
+navbar {
+  padding: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #4caf50;
+  color: white;
+}
+
+tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #e6e6e6;
+}
+
+.title-container {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.btn-container {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.btn-custom {
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  margin-right: 5px;
+  background-color: #3e7e55;
+  color: white;
+}
+
+.btn-view {
+  background-color: #3e7e55;
+  color: white;
+}
+
+.btn-custom:hover {
+  background-color: #558b6e;
+}
+
+.btn-lihat {
+  background-color: #606c38;
+  color: white;
+}
+
+.btn-delete {
+  background-color: #283618;
+  color: white;
+}
+
+@media print {
+  body {
+    margin: 0px;
+  }
+
+  button {
+    display: none;
+  }
+
+  th:last-child,
+  td:last-child {
+    display: none;
+  }
+}

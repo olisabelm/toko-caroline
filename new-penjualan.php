@@ -7,78 +7,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Penjualan</title>
-    <style>
-        /* Center the form */
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 90vh;
-            font-family: Poppins, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        /* Form styling */
-        .form {
-            max-width: 500px;
-            width: 100%;
-            padding: 20px;
-            border: 1px solid #ced4da;
-            border-radius: 10px;
-            background-color: #ffffff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .form h1 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .form label {
-            font-weight: bold;
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #ced4da;
-            border-radius: 4px;
-            margin-bottom: 10px;
-        }
-
-        .form-select {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #ced4da;
-            border-radius: 4px;
-            margin-bottom: 10px;
-            cursor: pointer;
-        }
-
-        .text-center {
-            text-align: center;
-        }
-
-        .btn {
-            padding: 8px 16px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            margin-right: 8px;
-        }
-
-        .btn-primary {
-            background-color: #007bff;
-            color: #ffffff;
-        }
-
-        .btn-secondary {
-            background-color: #6c757d;
-            color: #ffffff;
-        }
-    </style>
+    <title>Fresh Box</title>
+    <link rel="stylesheet" href="formstyle.css">
 </head>
 
 <body>
@@ -106,7 +36,7 @@
                 <select class="form-select" id="barang" name="id_barang">
                     <?php while ($barang = mysqli_fetch_array($query)) : ?>
                         <option value='<?= $barang["id"] ?>'>
-                            <?= $barang["nama"] ?>, harga: <?= $barang["harga_jual"] ?>, stok: <?= $barang["stok"] ?>
+                            <?= $barang["nama"] ?>, harga: <?= $barang["harga"] ?>, stok: <?= $barang["stok"] ?>
                         </option>
                     <?php endwhile ?>
                 </select>

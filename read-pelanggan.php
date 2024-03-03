@@ -2,10 +2,14 @@
     session_start();
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Read Pelanggan</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Box - Read Pelanggan</title>
+    <link rel="stylesheet" href="formstyle.css">
+       
 </head>
 
 <body>
@@ -23,33 +27,31 @@
     $pelanggan = mysqli_fetch_array($query);
     ?>
 
-    <div>
-        <form action="update-pelanggan.php" method="POST">
-            <h1>Lihat Pelanggan</h1>
-
-            <input type="hidden" name="id" value="<?= $id ?>">
-
-            <table>
-                <tr>
-                    <td>Nama</td>
-                    <td><input type="text" name="nama" value="<?= $pelanggan["nama"] ?>"></td>
-                </tr>
-                <tr>
-                    <td>Alamat</td>
-                    <td><input type="text" name="alamat" value="<?= $pelanggan["alamat"] ?>"></td>
-                </tr>
-                <tr>
-                    <td>Nomor Telepon</td>
-                    <td><input type="number" name="nomor_telepon" value="<?= $pelanggan["nomor_telepon"] ?>"></td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <button type="submit">SIMPAN</button>
-                        <button type="reset">RESET</button>
-                    </td>
-                </tr>
-            </table>
-        </form>
+    <div class="container">
+        <div class="card mt-5">
+            <div class="card-body">
+                <form action="update-barang.php" method="POST" class="form">
+                <h1>Lihat Pelanggan</h1>
+                    <input type="hidden" name="id" value="<?= $id ?>">
+                    <div class="mb-3">
+                        <label for="nama">Nama</label>
+                        <input type="text" class="form-control" id="nama" name="nama" value="<?= $pelanggan["nama"] ?>">
+                    </div>
+                    <div class="mb-3">
+                        <label for="alamat">Alamat</label>
+                        <input type="text" class="form-control" id="alamat" name="alamat" value="<?= $pelanggan["alamat"] ?>">
+                    </div>
+                    <div class="mb-3">
+                        <label for="nomor_telepon">Nomor Telepon</label>
+                        <input type="text" class="form-control" id="nomor_telepon" name="nomor_telepon" value="<?= $pelanggan["nomor_telepon"] ?>">
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">SIMPAN</button>
+                        <button type="reset" class="btn btn-secondary">RESET</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 </body>
 
