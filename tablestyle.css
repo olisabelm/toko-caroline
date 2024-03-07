@@ -1,30 +1,44 @@
 body {
   font-family: "Poppins", sans-serif;
   padding: 0;
+  margin: 0;
+  background-color: #f2f2f2;
 }
 
 .body-container {
   padding: 0 30px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-navbar {
+.navbar {
   padding: 0;
+  background-color: #3e7e55;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-table {
+.table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
 }
 
 th,
 td {
-  padding: 10px;
+  padding: 15px;
   border: 1px solid #ddd;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 th {
   background-color: #4caf50;
   color: white;
+  font-weight: bold;
 }
 
 tr:nth-child(odd) {
@@ -38,35 +52,32 @@ tr:hover {
 .title-container {
   margin-bottom: 20px;
   margin-top: 20px;
-  font-size: 16px;
+  font-size: 2rem;
+  text-align: center;
 }
 
 .btn-container {
   margin-bottom: 20px;
   display: flex;
   justify-content: flex-start;
+  gap: 10px;
 }
 
 .btn-custom {
-  padding: 5px 10px;
-  font-size: 14px;
+  padding: 10px 20px;
+  font-size: 1rem;
   border-radius: 5px;
   margin-right: 5px;
-  background-color: #3e7e55;
-  color: white;
-}
-
-.btn-view {
-  background-color: #3e7e55;
-  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .btn-custom:hover {
   background-color: #558b6e;
 }
 
-.btn-lihat {
-  background-color: #606c38;
+.btn-view {
+  background-color: #3e7e55;
   color: white;
 }
 

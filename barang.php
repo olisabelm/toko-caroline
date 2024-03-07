@@ -20,20 +20,16 @@
     $query = mysqli_query($koneksi, $sql);
     ?>
 
-    <div class="body-container"> <!-- Container untuk body -->
+    <div class="body-container">
         <div class="container">
-            <!-- Title container with margin -->
             <div class="title-container">
                 <h1 class="mb-3">Data Barang</h1>
             </div>
-            <!-- Button container with margin -->
             <div class="btn-container">
                 <form action="new-barang.php" method="GET">
                     <button type="submit" class="btn btn-primary btn-custom btn-view">Tambah</button>
                 </form>
-                <!-- <form action="cetak-barang.php" method="GET"> -->
                      <button onclick="cetak()"><a target="_blank" href="cetak-barang.php" class="btn btn-primary btn-custom btn-view">Cetak</a></button>
-                <!-- </form> -->
             </div>
             <div class="table-responsive table-custom">
                 <table class="table table-bordered table-striped">
