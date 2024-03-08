@@ -7,7 +7,6 @@
   
   <!-- Custom Fonts -->
   <style>
-
     * {
       margin: 0;
       padding: 0;
@@ -20,11 +19,15 @@
     }
 
     .navbar {
-      background-color: #538D22; /* Warna latar belakang hijau muda */
+      background-color: rgba(83, 141, 34, 0.8); /* Warna latar belakang hijau muda dengan transparansi */
       padding: 10px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center; /* Menyamakan vertikal align */
+      position: fixed; /* Membuat navbar tetap di atas */
+      width: 100%; /* Memastikan navbar menempati seluruh lebar layar */
+      top: 0; /* Menempatkan navbar di bagian atas */
+      z-index: 1000; /* Menempatkan navbar di atas konten lain */
     }
 
     .navbar-brand,
@@ -131,7 +134,7 @@
     }
   ?>
 
-  <nav class="navbar">
+  <nav class="navbar fixed-top"> <!-- Tambahkan class fixed-top -->
     <a class="navbar-brand" href="#">Fresh Box</a>
     <div class="navbar-nav">
       <ul class="me-auto mb-2 mb-lg-0">
