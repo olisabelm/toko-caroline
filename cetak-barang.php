@@ -2,99 +2,24 @@
     session_start();
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
     
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
     <title>Data Barang</title>
-    <style>
-        body {
-            font-family: "Poppins", sans-serif;
-            padding: 0; 
-        }
-
-        .body-container {
-            padding: 0 30px; 
-        }
-
-        navbar {
-            padding: 0; 
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        th,
-        td {
-            padding: 10px;
-            border: 1px solid #ddd;
-        }
-
-        th {
-            background-color: #4CAF50;
-            color: white;
-        }
-
-        tr:nth-child(odd) {
-            background-color: #f2f2f2;
-        }
-
-        tr:hover {
-            background-color: #e6e6e6;
-        }
-
-        .title-container {
-            margin-bottom: 20px;
-            margin-top: 20px;
-            font-size: 16px;
-        }
-
-        .btn-container {
-            margin-bottom: 20px;
-            display: flex;
-            justify-content: flex-start;
-        }
-
-        /* Add, Edit, and Delete buttons */
-        .btn-custom {
-            padding: 5px 10px;
-            font-size: 14px;
-            border-radius: 5px;
-            margin-right: 5px;
-        }
-
-        .btn-view {
-            background-color: #3e7e55;
-            color: white;
-        }
-
-        .btn-lihat {
-            background-color: #606c38;
-            color: white;
-        }
-
-        .btn-delete {
-            background-color: #283618;
-            color: white;
-        }
-
-        @media print {
-            body {
-                margin: 0px
-            }
-
-            button {
-                display: none;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="tablestyle.css">
 </head>
+<header>
+<?php include "menu.php"; ?>
 
+</header>
+
+<br>
+<br>
+<br>
 <body>
-    <?php include "menu.php"; ?>
 
     <?php
     require "koneksi.php";
@@ -102,21 +27,20 @@
     $query = mysqli_query($koneksi, $sql);
     ?>
 
-    <div class="body-container"> <!-- Container untuk body -->
-        <div class="container">
-            <!-- Title container with margin -->
-            <div class="title-container">
-                <h1 class="mb-3">Data Barang</h1>
-            </div>
-            <!-- Button container with margin -->
-            <div class="btn-container">
-                <form action="new-barang.php" method="GET">
-                    <button type="submit" class="btn btn-primary btn-custom btn-view">Tambah</button>
-                </form>
-            </div>
-            <div class="table-responsive table-custom">
-                <table class="table table-bordered table-striped">
-                    <thead class="table-success">
+    <main class="table">
+            <section class="table__header">
+                <h1>Data Barang</h1>
+                <div class="button-container">
+                    <form action="new-barang.php" method="GET">
+                        <button type="submit" class="btn btn-primary btn-custom btn-view">
+                            <span class="btn-text">Tambah</span>
+                        </button>
+                    </form>
+                </div>
+            </section>
+            <section class="table__body">
+                <table>
+                    <thead>
                         <tr>
                             <th scope="col">No.</th>
                             <th scope="col">Nama</th>
@@ -142,13 +66,17 @@
                                 <td>
                                     <form action="read-barang.php" method="GET">
                                         <input type="hidden" name="id" value="<?= $barang["id"] ?>">
-                                        <button type="submit" class="btn btn-warning btn-custom btn-lihat">Lihat</button>
+                                        <button type="submit" class="btn btn-primary btn-custom btn-view">
+                                            <span class="btn-text">Lihat</span>
+                                        </button>
                                     </form>
                                 </td>
                                 <td>
-                                    <form action="delete-barang.php" method="POST">
+                                    <form action="delete-barang.php" method="POST" onsubmit="return konfirmasi(this)">
                                         <input type="hidden" name="id" value="<?= $barang["id"] ?>">
-                                        <button type="submit" class="btn btn-danger btn-custom btn-delete">Delete</button>
+                                        <button type="submit" class="btn btn-danger btn-custom btn-delete">
+                                            <span class="btn-text">Delete</span>
+                                        </button>
                                     </form>
                                 </td>
                             </tr>
@@ -156,9 +84,9 @@
                         <?php endwhile ?>
                     </tbody>
                 </table>
-            </div>
-        </div>
-    </div>
+            </section>
+    </main>
+
 
     <script type="text/javascript">
         window.print();

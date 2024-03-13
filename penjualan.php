@@ -5,13 +5,19 @@
 <html>
 
 <head>
-    <title>Fresh Box</title>
-    <style>
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penjualan</title>
 </head>
+<header>
+<?php include "menu.php"; ?>
 
+</header>
+
+<br>
+<br>
+<br>
 <body>
-    <?php include "menu.php"; ?>
 
     <?php
     require "koneksi.php";
@@ -30,6 +36,7 @@
                 <tr>
                     <th scope="col">No.</th>
                     <th scope="col">Nama Barang</th>
+                    <th scope="col">Nama Pelanggan</th>
                     <th scope="col">Jumlah</th>
                     <th scope="col">Total Harga</th>
                     <th scope="col">Diinput oleh</th>
@@ -43,6 +50,7 @@
                     <tr>
                         <td><?= $i ?></td>
                         <td><?= $penjualan["nama_barang"] ?></td>
+                        <td><?= $penjualan["nama_pelanggan"] ?></td>
                         <td><?= $penjualan["jumlah"] ?></td>
                         <td><?= $penjualan["total_harga"] ?></td>
                         <td><?= $penjualan["username"] ?></td>

@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fresh Box</title>
+    <title>New Penjualan</title>
     <link rel="stylesheet" href="formstyle.css">
 </head>
 
@@ -40,6 +40,10 @@
                         </option>
                     <?php endwhile ?>
                 </select>
+            </div>
+            <div class="mb-3">
+                <label for="nama_pelanggan">Nama Pelanggan</label>
+                <input type="text" class="form-control" id="nama_pelanggan" name="nama_pelanggan" required>
             </div>
             <div class="mb-3">
                 <label for="jumlah">Jumlah</label>

@@ -18,6 +18,6 @@
 </head>
 <body>
     <?php include "menu.php"; ?>
-    <img src="background15.png" alt="Halaman Home">
+    <img src="background16.png" alt="Halaman Home">
 </body>
 </html>

@@ -1,102 +1,165 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("Poppins-Regular.eot");
+  src: url("Poppins-Regular.eot?#iefix") format("embedded-opentype"), url("Poppins-Regular.woff2") format("woff2"), url("Poppins-Regular.woff") format("woff"), url("Poppins-Regular.ttf") format("truetype"),
+    url("Poppins-Regular.svg#Poppins-Regular") format("svg");
+  font-weight: 900;
+  font-style: normal;
+  font-display: normal;
+}
+
 body {
   font-family: "Poppins", sans-serif;
-  padding: 0;
-  margin: 0;
-  background-color: #f2f2f2;
+  min-height: 100vh;
+  background: url(background14.png) center / cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.body-container {
-  padding: 0 30px;
-  max-width: 1200px;
-  margin: 0 auto;
+main.table {
+  width: 82vw;
+  height: 90vh;
+  background-color: #fff5;
+  backdrop-filter: blur(7px);
+  box-shadow: 0 0.4rem 0.8rem #0005;
+  border-radius: 0.8rem;
+  overflow: hidden;
 }
 
-.navbar {
-  padding: 0;
-  background-color: #3e7e55;
+main {
+  margin-top: 60px;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.table__header {
+  width: 100%;
+  height: 10%;
+  background-color: #fff4;
+  padding: 0.9rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.table {
+.table__body {
+  width: 95%;
+  max-height: calc(89% - 1.6rem);
+  background-color: #fffb;
+  margin: 0.8rem auto;
+  border-radius: 0.6rem;
+  overflow: auto;
+  overflow: overlay;
+}
+
+.table__body::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+.table__body::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+  background-color: #0004;
+  visibility: hidden;
+}
+
+.table__body:hover::-webkit-scrollbar-thumb {
+  visibility: visible;
+}
+
+table {
   width: 100%;
-  border-collapse: collapse;
-  table-layout: fixed;
+  max-height: calc(100vh - 160px);
+  overflow-y: auto;
 }
 
+table,
 th,
 td {
-  padding: 15px;
-  border: 1px solid #ddd;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  border-collapse: collapse;
+  padding: 1rem;
+  text-align: left;
 }
 
-th {
-  background-color: #4caf50;
-  color: white;
-  font-weight: bold;
-}
-
-tr:nth-child(odd) {
-  background-color: #f2f2f2;
-}
-
-tr:hover {
-  background-color: #e6e6e6;
-}
-
-.title-container {
-  margin-bottom: 20px;
-  margin-top: 20px;
-  font-size: 2rem;
-  text-align: center;
-}
-
-.btn-container {
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: flex-start;
-  gap: 10px;
-}
-
-.btn-custom {
-  padding: 10px 20px;
-  font-size: 1rem;
-  border-radius: 5px;
-  margin-right: 5px;
+thead th {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: #d5d1defe;
   cursor: pointer;
+  text-transform: capitalize;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #0000000b;
+}
+
+tbody tr:hover {
+  background-color: #fff6 !important;
+}
+
+.btn {
+  position: relative;
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  overflow: hidden;
   transition: background-color 0.3s ease;
 }
 
-.btn-custom:hover {
-  background-color: #558b6e;
-}
-
-.btn-view {
+.btn.btn-primary {
   background-color: #3e7e55;
   color: white;
+  border: none;
 }
 
-.btn-delete {
+.btn.btn-danger {
   background-color: #283618;
   color: white;
+  border: none;
 }
 
-@media print {
-  body {
-    margin: 0px;
-  }
+.btn::before,
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #558b6e;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
 
-  button {
-    display: none;
-  }
+.btn::after {
+  transform-origin: right;
+}
 
-  th:last-child,
-  td:last-child {
-    display: none;
+.btn:hover::before,
+.btn:hover::after {
+  transform: scaleX(1);
+}
+
+.btn-text {
+  color: white;
+  text-decoration: none;
+}
+
+.btn-custom {
+  margin-left: 10px;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 1000px) {
+  td:not(:first-of-type) {
+    min-width: 12.1rem;
   }
 }

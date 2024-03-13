@@ -4,8 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fresh Box</title>
-  
-  <!-- Custom Fonts -->
+
   <style>
     * {
       margin: 0;
@@ -13,9 +12,15 @@
       box-sizing: border-box;
     }
 
-    /* Custom styles */
-    body {
+    header {
       font-family: "Poppins", sans-serif;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
     .navbar {
@@ -120,21 +125,16 @@
       }
     }
 
-    @media print {
-      nav {
-        display: none;
-      }
-    }
   </style>
 </head>
-<body>
+<header>
   <?php
     if (!array_key_exists("username", $_SESSION)) {
         header("location:logout.php");
     }
   ?>
 
-  <nav class="navbar fixed-top"> <!-- Tambahkan class fixed-top -->
+  <nav class="navbar fixed-top">
     <a class="navbar-brand" href="#">Fresh Box</a>
     <div class="navbar-nav">
       <ul class="me-auto mb-2 mb-lg-0">
@@ -178,15 +178,8 @@
     </div>
   </nav>
 
-  <script>
-    function toggleNavbar() {
-      var nav = document.querySelector('.navbar-collapse');
-      if (nav.style.display === 'block') {
-        nav.style.display = 'none';
-      } else {
-        nav.style.display = 'block';
-      }
-    }
-  </script>
-</body>
+  
+</header>
+
+
 </html>

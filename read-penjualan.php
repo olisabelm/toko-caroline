@@ -35,6 +35,10 @@
                             <input readonly type="text" class="form-control" id="namaBarang" value="<?= $penjualan["nama_barang"] ?>">
                     </div>
                     <div class="mb-3 row">
+                        <label for="namaPelanggan" class="col-sm-2 col-form-label">Nama Pelanggan</label>
+                            <input readonly type="text" class="form-control" id="namaPelanggan" value="<?= $penjualan["nama_pelanggan"] ?>">
+                    </div>
+                    <div class="mb-3 row">
                         <label for="jumlah" class="col-sm-2 col-form-label">Jumlah</label>
                             <input readonly type="text" class="form-control" id="jumlah" value="<?= $penjualan["jumlah"] ?>">
                     </div>

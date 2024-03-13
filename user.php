@@ -2,94 +2,22 @@
     session_start();
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
     <title>Data User</title>
-    <style>
-        body {
-            font-family: "Poppins", sans-serif;
-            padding: 0;
-        }
-
-        h1 {
-            color: #333;
-        }
-        
-        .body-container {
-            padding: 0 30px;
-        }
-
-        navbar {
-            padding: 0;
-        }
-
-        .table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        th,
-        td {
-            padding: 10px;
-            border: 1px solid #ddd;
-        }
-
-        th {
-            background-color: #4CAF50;
-            font-weight: bold;
-            font-size: 16px;
-        }
-
-        tr:nth-child(odd) {
-            background-color: #f2f2f2;
-        }
-
-        tr:hover {
-            background-color: #e6e6e6;
-        }
-
-        .title-container {
-            margin-bottom: 20px;
-            margin-top: 20px;
-            font-size: 16px;
-        }
-
-        .btn-container {
-            margin-bottom: 20px;
-            display: flex;
-            justify-content: flex-start;
-        }
-
-        /* Add, Edit, and Delete buttons */
-        .btn-custom {
-            padding: 5px 10px;
-            font-size: 14px;
-            border-radius: 5px;
-            margin-right: 5px;
-        }
-
-        .btn-view {
-            background-color: #3e7e55;
-            color: white;
-        }
-
-        .btn-lihat {
-            background-color: #606c38;
-            color: white;
-        }
-
-        .btn-delete {
-            background-color: #283618;
-            color: white;
-        }
-    </style>
+    <link rel="stylesheet" href="tablestyle.css">
 </head>
 
+<header>
+<?php include "menu.php"; ?>
+
+</header>
+
 <body>
-    <?php include "menu.php"; ?>
 
     <?php
     if ($_SESSION["level"] != "admin") {
@@ -103,26 +31,30 @@
     $query = mysqli_query($koneksi, $sql);
     ?>
 
-<div class="body-container"> 
-        <div class="container">
-            <div class="title-container">
-                <h1 class="mb-3">Data User</h1>
-            </div>
-            <div class="btn-container">
+    <main class="table">
+        <section class="table__header">
+            <h1>Data User</h1>
+            <div class="button-container">
                 <form action="new-user.php" method="GET">
-                    <button type="submit" class="btn btn-primary btn-custom btn-view">Tambah</button>
+                    <button type="submit" class="btn btn-primary btn-custom btn-view">
+                        <span class="btn-text">Tambah</span>
+                    </button>
                 </form>
+                <button onclick="cetak()" class="btn btn-primary btn-custom btn-view">
+                    <a target="_blank" href="cetak-barang.php" class="btn-text">Cetak</a>
+                </button>
             </div>
-            <div class="table-responsive table-custom">
-                <table class="table table-bordered table-striped">
-                    <thead class="table-success">
-                        <tr>
-                        <th scope="col">No.</th>
-                        <th scope="col">Username</th>
-                        <th scope="col">Level</th>
-                        <th scope="col">Tanggal buat</th>
-                        <th scope="col">Tanggal ubah</th>
-                        <th scope="col" colspan="2">Aksi</th>
+        </section>
+        <section class="table__body">
+            <table>
+                <thead>
+                    <tr>
+                      <th scope="col">No.</th>
+                      <th scope="col">Username</th>
+                      <th scope="col">Level</th>
+                      <th scope="col">Tanggal Dibuat</th>
+                      <th scope="col">Tanggal Diubah</th>
+                      <th scope="col" colspan="2">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -137,8 +69,8 @@
                             <td>
                                 <form action="read-user.php" method="GET">
                                     <input type="hidden" name="id" value="<?= $user["id"] ?>">
-                                    <button type="submit" class="btn btn-warning btn-custom btn-lihat">Lihat</button>
-                                 </form>
+                                    <button type="submit" class="btn btn-primary btn-custom btn-view">Lihat</button>
+                                </form>
                             </td>
                             <td>
                                 <form action="delete-user.php" method="POST" onsubmit="return konfirmasi(this)">
@@ -151,9 +83,14 @@
                     <?php endwhile ?>
                 </tbody>
             </table>
-        </div>
-    </div>
+        </section>
+    </main>
+    
     <script>
+        function cetak() {
+             window.print();
+        }
+
         function konfirmasi(form) {
             formData = new FormData(form);
             id = formData.get("id");
