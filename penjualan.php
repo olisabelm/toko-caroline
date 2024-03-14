@@ -7,32 +7,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
     <title>Penjualan</title>
+    <link rel="stylesheet" href="tablestyle.css">
 </head>
 <header>
 <?php include "menu.php"; ?>
 
 </header>
 
-<br>
-<br>
-<br>
 <body>
 
     <?php
     require "koneksi.php";
 
-    $sql = "SELECT penjualan.id, barang.nama as nama_barang, penjualan.jumlah, penjualan.total_harga, user.username, penjualan.created_at FROM barang JOIN penjualan on barang.id = penjualan.id_barang JOIN user ON user.id = penjualan.id_staff ORDER BY penjualan.created_at DESC";
+   $sql = "SELECT penjualan.id, 
+       barang.nama AS nama_barang,
+       pelanggan.nama, 
+       penjualan.jumlah, 
+       penjualan.total_harga, 
+       user.username, 
+       penjualan.created_at 
+        FROM penjualan 
+        JOIN barang ON penjualan.id_barang = barang.id 
+        JOIN pelanggan ON penjualan.id_pelanggan = pelanggan.id 
+        JOIN user ON penjualan.id_staff = user.id 
+        ORDER BY penjualan.created_at DESC";
     $query = mysqli_query($koneksi, $sql);
     ?>
 
-    <div class="container">
+    <main class="table">
+        <section class="table__header">
         <h1>Data Penjualan</h1>
+        <div class="button-container">
         <form action="new-penjualan.php" method="GET">
-            <button type="submit" class="btn btn-primary mb-3">Tambah</button>
+            <button type="submit" class="btn btn-primary btn-custom btn-view">
+                <span class="btn-text">Tambah</span>
+            </button>
         </form>
-        <table class="table table-striped">
-            <thead class="table-dark">
+         <button onclick="cetak()" class="btn btn-primary btn-custom btn-view">
+                    <a target="_blank" href="cetak-barang.php" class="btn-text">Cetak</a>
+                </button>
+            </div>
+        </section>
+        <section class="table__body">
+        <table>
+            <thead>
                 <tr>
                     <th scope="col">No.</th>
                     <th scope="col">Nama Barang</th>
@@ -50,7 +70,7 @@
                     <tr>
                         <td><?= $i ?></td>
                         <td><?= $penjualan["nama_barang"] ?></td>
-                        <td><?= $penjualan["nama_pelanggan"] ?></td>
+                        <td><?= $penjualan["nama"] ?></td>
                         <td><?= $penjualan["jumlah"] ?></td>
                         <td><?= $penjualan["total_harga"] ?></td>
                         <td><?= $penjualan["username"] ?></td>
@@ -58,13 +78,13 @@
                         <td>
                             <form action="read-penjualan.php" method="GET">
                                 <input type="hidden" name="id" value='<?= $penjualan["id"] ?>'>
-                                <button type="submit" class="btn btn-info btn-sm">Lihat</button>
+                                <button type="submit" class="btn btn-primary btn-custom btn-view">Lihat</button>
                             </form>
                         </td>
                         <td>
                             <form action="delete-penjualan.php" method="POST" onsubmit="return konfirmasi(this)">
                                 <input type="hidden" name="id" value='<?= $penjualan["id"] ?>'>
-                                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                <button type="submit"  class="btn btn-danger btn-custom btn-delete">Delete</button>
                             </form>
                         </td>
                     </tr>

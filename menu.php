@@ -4,35 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fresh Box</title>
-
+  
+  <!-- Custom Fonts -->
   <style>
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    header {
+    /* Custom styles */
+    body {
       font-family: "Poppins", sans-serif;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 100;
-      background-color: #fff;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
     .navbar {
-      background-color: rgba(83, 141, 34, 0.8); /* Warna latar belakang hijau muda dengan transparansi */
+      background-color: #538D22; /* Warna latar belakang hijau muda */
       padding: 10px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center; /* Menyamakan vertikal align */
-      position: fixed; /* Membuat navbar tetap di atas */
-      width: 100%; /* Memastikan navbar menempati seluruh lebar layar */
-      top: 0; /* Menempatkan navbar di bagian atas */
-      z-index: 1000; /* Menempatkan navbar di atas konten lain */
     }
 
     .navbar-brand,
@@ -125,6 +117,11 @@
       }
     }
 
+    @media print {
+      nav {
+        display: none;
+      }
+    }
   </style>
 </head>
 <header>
@@ -134,7 +131,7 @@
     }
   ?>
 
-  <nav class="navbar fixed-top">
+  <nav class="navbar">
     <a class="navbar-brand" href="#">Fresh Box</a>
     <div class="navbar-nav">
       <ul class="me-auto mb-2 mb-lg-0">
@@ -153,13 +150,8 @@
             <li><a class="dropdown-item" href="pelanggan.php">Pelanggan</a></li>
           </ul>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="transaksiDropdown">
-            TRANSAKSI
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="transaksiDropdown">
-            <li><a class="dropdown-item" href="penjualan.php">Penjualan</a></li>
-          </ul>
+        <li class="nav-item">
+          <a class="nav-link" href="penjualan.php">PENJUALAN</a>
         </li>
       </ul>
     </div>
@@ -178,8 +170,15 @@
     </div>
   </nav>
 
-  
+  <script>
+    function toggleNavbar() {
+      var nav = document.querySelector('.navbar-collapse');
+      if (nav.style.display === 'block') {
+        nav.style.display = 'none';
+      } else {
+        nav.style.display = 'block';
+      }
+    }
+  </script>
 </header>
-
-
 </html>

@@ -37,9 +37,7 @@
                         <span class="btn-text">Tambah</span>
                     </button>
                 </form>
-                <button onclick="cetak()" class="btn btn-primary btn-custom btn-view">
-                    <a target="_blank" href="cetak-barang.php" class="btn-text">Cetak</a>
-                </button>
+                <button onclick="cetaklaporan()" class="btn btn-primary btn-custom btn-view">Cetak</button>
             </div>
         </section>
         <section class="table__body">
@@ -75,6 +73,7 @@
                                     </button>
                                 </form>
                             </td>
+
                             <td>
                                 <form action="delete-barang.php" method="POST" onsubmit="return konfirmasi(this)">
                                     <input type="hidden" name="id" value="<?= $barang["id"] ?>">
@@ -83,6 +82,7 @@
                                     </button>
                                 </form>
                             </td>
+                            
                         </tr>
                         <?php $i++; ?>
                     <?php endwhile ?>
@@ -94,7 +94,7 @@
 
 
     <script>
-        function cetak() {
+        function cetaklaporan() {
              window.print();
         }
 

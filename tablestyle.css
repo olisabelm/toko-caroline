@@ -163,3 +163,8 @@ tbody tr:hover {
     min-width: 12.1rem;
   }
 }
+
+@media print {
+  .button-container {
+    display: none;
+  }

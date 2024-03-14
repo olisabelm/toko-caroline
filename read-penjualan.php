@@ -20,7 +20,18 @@
 
     $id = $_GET["id"];
 
-    $sql = "SELECT penjualan.id, barang.nama as nama_barang, penjualan.jumlah, penjualan.total_harga, user.username, penjualan.created_at FROM barang JOIN penjualan on barang.id = penjualan.id_barang JOIN user ON user.id = penjualan.id_staff WHERE penjualan.id = '$id'";
+    $sql = "SELECT penjualan.id, 
+    barang.nama AS nama_barang,
+    pelanggan.nama, 
+    penjualan.jumlah, 
+    penjualan.total_harga, 
+    user.username, 
+    penjualan.created_at 
+     FROM penjualan 
+     JOIN barang ON penjualan.id_barang = barang.id 
+     JOIN pelanggan ON penjualan.id_pelanggan = pelanggan.id 
+     JOIN user ON penjualan.id_staff = user.id 
+     WHERE penjualan.id = '$id' ";
     $query = mysqli_query($koneksi, $sql);
     $penjualan = mysqli_fetch_array($query);
     ?>
@@ -36,7 +47,7 @@
                     </div>
                     <div class="mb-3 row">
                         <label for="namaPelanggan" class="col-sm-2 col-form-label">Nama Pelanggan</label>
-                            <input readonly type="text" class="form-control" id="namaPelanggan" value="<?= $penjualan["nama_pelanggan"] ?>">
+                            <input readonly type="text" class="form-control" id="nama" value="<?= $penjualan["nama"] ?>">
                     </div>
                     <div class="mb-3 row">
                         <label for="jumlah" class="col-sm-2 col-form-label">Jumlah</label>
