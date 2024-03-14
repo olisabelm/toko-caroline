@@ -130,28 +130,69 @@
          				<h2 class="new__title">Tanaman Hias</h2>
 
          				<p>
-         				 Tanaman hias memberikan sentuhan alami dan keindahan visual pada ruangan. Dapat membuat ruangan terlihat lebih hidup dan menyegarkan.
+         				 Tanaman hias memberikan sentuhan 
+						 alami dan keindahan visual pada ruangan. 
+						 Dapat membuat ruangan terlihat 
+						 lebih hidup dan menyegarkan.
          				</p>
          			</li>
          			<li class="care__item">
          				<h2 class="new__title">Tanaman Herbal</h2>
 
          				<p>
-         				 Tanaman herbal telah digunakan selama ribuan tahun dalam pengobatan tradisional di berbagai budaya di seluruh dunia. 
+         				 Tanaman herbal telah digunakan 
+						 selama ribuan tahun dalam 
+						 pengobatan tradisional di berbagai 
+						 budaya di seluruh dunia. 
          				</p>
          			</li>
          			<li class="care__item">
          				<h2 class="new__title">Tanaman Aromatik</h2>
 
          				<p>
-         				 Tanaman aromatik memberikan manfaat sebagai penyedap makanan alami, pengusir serangga, pengobatan alternatif, sumber aroma menenangkan, dan bahan untuk produk perawatan tubuh serta minuman.
+         				 Tanaman aromatik memberikan manfaat 
+						 sebagai penyedap makanan alami, 
+						 pengusir serangga, pengobatan alternatif, 
+						 sumber aroma menenangkan, dan 
+						 bahan untuk produk perawatan tubuh serta minuman.
          				</p>
          			</li>
          		</ul>
          	</div>
          </section>
 
+		<!--==================== CONTACT ====================-->
+		<section class="contact section" id="contact">
+            <h2 class="section__title">
+				CONTACT US
+			</h2>
 
+			<div class="content__container container grid">
+				<img src="plant1.png" alt="image" class="contact__img">
+
+				<div class="contact__content">
+					<div>
+						<h3 class="contact__title">Social Media</h3>
+
+					</div>
+						<a href="" target="_blank">
+
+						</a>
+
+						<a href="" target="_blank">
+
+						</a>
+						
+						<a href="" target="_blank">
+
+						</a>
+					<div>
+
+					</div>
+				</div>
+			</div>
+			</section>
+		 </main>
 		
 	</main>
 </body>

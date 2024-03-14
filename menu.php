@@ -14,17 +14,27 @@
       box-sizing: border-box;
     }
 
-    /* Custom styles */
-    body {
+    header {
       font-family: "Poppins", sans-serif;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
     .navbar {
-      background-color: #538D22; /* Warna latar belakang hijau muda */
+      background-color: rgba(83, 141, 34, 0.8); /* Warna latar belakang hijau muda dengan transparansi */
       padding: 10px 20px;
       display: flex;
       justify-content: space-between;
-      align-items: center; /* Menyamakan vertikal align */
+      align-items: center; 
+      position: fixed; 
+      width: 100%; 
+      top: 0; 
+      z-index: 1000; 
     }
 
     .navbar-brand,
@@ -34,7 +44,7 @@
       font-size: 24px;
       font-weight: bold;
       text-decoration: none;
-      line-height: 1; /* Menyamakan tinggi tulisan */
+      line-height: 1; 
     }
 
     .navbar-brand,
@@ -131,7 +141,7 @@
     }
   ?>
 
-  <nav class="navbar">
+  <nav class="navbar fixed-top">
     <a class="navbar-brand" href="#">Fresh Box</a>
     <div class="navbar-nav">
       <ul class="me-auto mb-2 mb-lg-0">

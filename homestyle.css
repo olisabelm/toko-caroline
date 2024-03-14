@@ -196,3 +196,24 @@ img {
 }
 
 /*==================== BERITA ====================*/
+.care__container {
+  padding-top: 2rem;
+  row-gap: 2rem;
+}
+
+.care__img {
+  width: 270px;
+  filter: drop-shadow(0 0 48px hsla(93, 54%, 54%, .4));
+  justify-self: center;
+}
+
+.care__list {
+  display: grid;
+  row-gap: 1rem;
+}
+
+.care__item {
+  display: flex;
+  column-gap: .5rem;
+  align-items: flex-start;
+}
