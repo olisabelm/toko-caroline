@@ -12,7 +12,7 @@
         
 </head>
 
-<body style="background-image: url('background6.png'); background-repeat: no-repeat; background-size: cover;">
+<body style="background-image: url('background16.png'); background-repeat: no-repeat; background-size: cover;">
     <?php include "menu.php"; ?>
 
     <?php
@@ -23,33 +23,29 @@
     ?>
 
     <div class="container">
-        <div class="card">
-            <div class="card-body">
-                <form action="create-user.php" method="POST" class="form">
-                    <h1>Tambah User</h1>
-                    <div class="mb-2">
-                        <label for="username" class="form-label">Username</label>
-                        <input type="text" class="form-control" id="username" name="username" required>
-                    </div>
-                    <div class="mb-2">
-                        <label for="password" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="password" name="password" required>
-                    </div>
-                    <div class="mb-2">
-                        <label for="level" class="form-label">Level</label>
-                        <select class="form-select" id="level" name="level" required>
-                            <option value="admin">Admin</option>
-                            <option value="keuangan">Keuangan</option>
-                            <option value="logistik">Logistik</option>
-                        </select>
-                    </div>
-                    <div class="d-grid gap-2">
-                        <button type="submit" class="btn btn-primary">Simpan</button>
-                        <button type="reset" class="btn btn-secondary">Reset</button>
-                    </div>
-                </form>
+        <form action="create-user.php" method="POST" class="form">
+            <h1>Tambah User</h1>
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control" id="username" name="username" required>
             </div>
-        </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+            <div class="mb-3">
+                <label for="level" class="form-label">Level</label>
+                <select class="form-select" id="level" name="level" required>
+                    <option value="admin">Admin</option>
+                    <option value="keuangan">Keuangan</option>
+                    <option value="logistik">Logistik</option>
+                </select>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Simpan</button>
+                <button type="reset" class="btn btn-secondary">Reset</button>
+            </div>
+        </form>
     </div>
 </body>
 

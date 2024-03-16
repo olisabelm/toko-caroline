@@ -165,7 +165,9 @@ tbody tr:hover {
 }
 
 @media print {
-  .button-container {
+  .button-container,
+  th:last-child,
+  td:last-child {
     display: none;
   }
 }

@@ -7,14 +7,12 @@
 <head>
     <title>Fresh Box</title>
     <style>
-        /* Styles for container */
         .container {
             max-width: 300px;
             margin: 50px auto;
             padding: 0 15px;
         }
 
-        /* Styles for form */
         form {
             background-color: #fff;
             border-radius: 8px;
@@ -22,13 +20,11 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        /* Styles for form title */
         h1 {
             margin-bottom: 20px;
             text-align: center;
         }
 
-        /* Styles for form inputs and labels */
         .form-group {
             margin-bottom: 20px;
         }
@@ -44,8 +40,7 @@
             border: 1px solid #ccc;
             border-radius: 4px;
         }
-
-        /* Styles for buttons */
+        
         .btn-primary,
         .btn-secondary {
             padding: 8px 16px;

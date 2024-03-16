@@ -21,7 +21,7 @@
     }
     ?>
 
-    < <div class="container">
+    <div class="container">
         <form action="create-pelanggan.php" method="POST" class="form">
             <h1>Tambah Pelanggan</h1>
             <div class="mb-3">

@@ -142,7 +142,7 @@
   ?>
 
   <nav class="navbar fixed-top">
-    <a class="navbar-brand" href="#">Fresh Box</a>
+    <a class="navbar-brand" href="home.php">Fresh Box</a>
     <div class="navbar-nav">
       <ul class="me-auto mb-2 mb-lg-0">
         <li class="nav-item">
@@ -156,12 +156,12 @@
             <?php if ($_SESSION["level"] == "admin") : ?>
               <li><a class="dropdown-item" href="user.php">User</a></li>
             <?php endif ?>
-            <li><a class="dropdown-item" href="barang.php">Barang</a></li>
-            <li><a class="dropdown-item" href="pelanggan.php">Pelanggan</a></li>
+            <li><a class="dropdown-item" href="barang.php">Product</a></li>
+            <li><a class="dropdown-item" href="pelanggan.php">Customer</a></li>
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="penjualan.php">PENJUALAN</a>
+          <a class="nav-link" href="penjualan.php">SALE</a>
         </li>
       </ul>
     </div>
@@ -172,7 +172,7 @@
             Selamat datang, <?= $_SESSION["username"] ?>!
           </a>
           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-            <li><a class="dropdown-item" href="profil.php">Profil</a></li>
+            <li><a class="dropdown-item" href="profil.php">Profile</a></li>
             <li><a class="dropdown-item" href="logout.php">Log out</a></li>
           </ul>
         </li>

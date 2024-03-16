@@ -6,6 +6,7 @@
 <head>
 	<meta charset="UTF-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.1.0/remixicon.min.css">
 	  <link rel="stylesheet" href="homestyle.css">
 </head>
 
@@ -161,39 +162,48 @@
          	</div>
          </section>
 
-		<!--==================== CONTACT ====================-->
+		<!--==================== KONTAK ====================-->
 		<section class="contact section" id="contact">
             <h2 class="section__title">
 				CONTACT US
 			</h2>
 
-			<div class="content__container container grid">
+			<div class="contact__container container grid">
 				<img src="plant1.png" alt="image" class="contact__img">
 
 				<div class="contact__content">
 					<div>
 						<h3 class="contact__title">Social Media</h3>
 
+						<div class="contact__social">
+							<a href="https://www.instagram.com" target="_blank">
+								<i class="ri-instagram-fill"></i>
+							</a>
+
+							<a href="https://www.tiktok.com" target="_blank">
+								<i class="ri-tiktok-fill"></i>
+							</a>
+						</div>
 					</div>
-						<a href="" target="_blank">
+				
 
-						</a>
-
-						<a href="" target="_blank">
-
-						</a>
-						
-						<a href="" target="_blank">
-
-						</a>
 					<div>
+						<h3 class="contact__title">Find Us Here</h3>
 
+						<address class="contact__info">
+							Jalan Beringin Raya Utara 12			
+						</address>
 					</div>
 				</div>
 			</div>
-			</section>
-		 </main>
-		
+		</section>
 	</main>
+
+	 <!--=============== SCROLLREVEAL ===============-->
+	 <script src="scrollreveal.min.js"></script>
+
+	<!--=============== MAIN JS ===============-->
+	<script src="main.js"></script>
+
 </body>
 </html>

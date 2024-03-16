@@ -37,37 +37,33 @@
     ?>
 
     <div class="container">
-        <div class="card mt-5">
-            <div class="card-body">
-                <form action="update-barang.php" method="POST" class="form">
-                    <h1>Lihat Penjualan</h1>
-                    <div class="mb-3 row">
-                        <label for="namaBarang" class="col-sm-2 col-form-label">Nama Barang</label>
-                            <input readonly type="text" class="form-control" id="namaBarang" value="<?= $penjualan["nama_barang"] ?>">
-                    </div>
-                    <div class="mb-3 row">
-                        <label for="namaPelanggan" class="col-sm-2 col-form-label">Nama Pelanggan</label>
-                            <input readonly type="text" class="form-control" id="nama" value="<?= $penjualan["nama"] ?>">
-                    </div>
-                    <div class="mb-3 row">
-                        <label for="jumlah" class="col-sm-2 col-form-label">Jumlah</label>
-                            <input readonly type="text" class="form-control" id="jumlah" value="<?= $penjualan["jumlah"] ?>">
-                    </div>
-                    <div class="mb-3 row">
-                        <label for="totalHarga" class="col-sm-2 col-form-label">Total Harga</label>
-                            <input readonly type="text" class="form-control" id="totalHarga" value="<?= $penjualan["total_harga"] ?>">
-                    </div>
-                    <div class="mb-3 row">
-                        <label for="diinputOleh" class="col-sm-2 col-form-label">Diinput Oleh</label>
-                            <input readonly type="text" class="form-control" id="diinputOleh" value="<?= $penjualan["username"] ?>">
-                    </div>
-                    <div class="mb-3 row">
-                        <label for="waktu" class="col-sm-2 col-form-label">Waktu</label>
-                            <input readonly type="text" class="form-control" id="waktu" value="<?= $penjualan["created_at"] ?>">
-                    </div>
-                </form>
+        <form action="update-barang.php" method="POST" class="form center-form">
+            <h1>Lihat Penjualan</h1>
+            <div class="mb-3">
+                <label for="namaBarang" class="col-sm-2 col-form-label">Nama Barang</label>
+                <input readonly type="text" class="form-control" id="namaBarang" value="<?= $penjualan["nama_barang"] ?>">
             </div>
-        </div>
+            <div class="mb-3 row">
+                <label for="namaPelanggan" class="col-sm-2 col-form-label">Nama Pelanggan</label>
+                <input readonly type="text" class="form-control" id="nama" value="<?= $penjualan["nama"] ?>">
+            </div>
+            <div class="mb-3>
+                <label for="jumlah" class="col-sm-2 col-form-label">Jumlah</label>
+                <input readonly type="text" class="form-control" id="jumlah" value="<?= $penjualan["jumlah"] ?>">
+            </div>
+            <div class="mb-3">
+                <label for="totalHarga" class="col-sm-2 col-form-label">Total Harga</label>
+                <input readonly type="text" class="form-control" id="totalHarga" value="<?= $penjualan["total_harga"] ?>">
+            </div>
+            <div class="mb-3">
+                <label for="diinputOleh" class="col-sm-2 col-form-label">Diinput Oleh</label>
+                <input readonly type="text" class="form-control" id="diinputOleh" value="<?= $penjualan["username"] ?>">
+            </div>
+            <div class="mb-3">
+                <label for="waktu" class="col-sm-2 col-form-label">Waktu</label>
+                <input readonly type="text" class="form-control" id="waktu" value="<?= $penjualan["created_at"] ?>">
+            </div>
+        </form>
     </div>
 </body>
 </html>
