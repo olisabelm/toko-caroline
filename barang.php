@@ -78,7 +78,7 @@
                                 <form action="delete-barang.php" method="POST" onsubmit="return konfirmasi(this)">
                                     <input type="hidden" name="id" value="<?= $barang["id"] ?>">
                                     <button type="submit" class="btn btn-danger btn-custom btn-delete">
-                                        <span class="btn-text">Delete</span>
+                                        <span class="btn-text">Hapus</span>
                                     </button>
                                 </form>
                             </td>

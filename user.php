@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
-    <title>Data User</title>
+    <title>Data Pwngguna</title>
     <link rel="stylesheet" href="tablestyle.css">
 </head>
 
@@ -33,7 +33,7 @@
 
     <main class="table">
         <section class="table__header">
-            <h1>Data User</h1>
+            <h1>Data Pengguna</h1>
             <div class="button-container">
                 <form action="new-user.php" method="GET">
                     <button type="submit" class="btn btn-primary btn-custom btn-view">
@@ -50,8 +50,8 @@
                 <thead>
                     <tr>
                       <th scope="col">No.</th>
-                      <th scope="col">Username</th>
-                      <th scope="col">Level</th>
+                      <th scope="col">Nama Pengguna</th>
+                      <th scope="col">Tingkat</th>
                       <th scope="col">Tanggal Dibuat</th>
                       <th scope="col">Tanggal Diubah</th>
                       <th scope="col" colspan="2">Aksi</th>
@@ -75,7 +75,7 @@
                             <td>
                                 <form action="delete-user.php" method="POST" onsubmit="return konfirmasi(this)">
                                     <input type="hidden" name="id" value="<?= $user["id"] ?>">
-                                    <button type="submit" class="btn btn-danger btn-custom btn-delete">Delete</button>
+                                    <button type="submit" class="btn btn-danger btn-custom btn-delete">Hapus</button>
                                 </form>
                             </td>
                         </tr>

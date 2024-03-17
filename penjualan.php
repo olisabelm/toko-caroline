@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
-    <title>Penjualan</title>
+    <title>Data Penjualan</title>
     <link rel="stylesheet" href="tablestyle.css">
 </head>
 <header>
@@ -84,7 +84,7 @@
                         <td>
                             <form action="delete-penjualan.php" method="POST" onsubmit="return konfirmasi(this)">
                                 <input type="hidden" name="id" value='<?= $penjualan["id"] ?>'>
-                                <button type="submit"  class="btn btn-danger btn-custom btn-delete">Delete</button>
+                                <button type="submit"  class="btn btn-danger btn-custom btn-delete">Hapus</button>
                             </form>
                         </td>
                     </tr>

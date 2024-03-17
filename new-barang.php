@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fresh Box</title>
+    <title>Tambah Barang</title>
     <link rel="stylesheet" href="formstyle.css">
 </head>
 
@@ -46,7 +46,7 @@
             </div>
             <div class="text-center">
                 <button type="submit" class="btn btn-primary">SIMPAN</button>
-                <button type="reset" class="btn btn-secondary">RESET</button>
+                <button type="reset" class="btn btn-secondary">ULANG</button>
             </div>
         </form>
     </div>

@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fresh Box</title>
+    <title>Lihat Pengguna</title>
     <link rel ="stylesheet" href="formstyle.css">
 </head>
 
@@ -32,19 +32,19 @@
 
     <div class="container">
         <form action="update-user.php" method="POST" class="form">
-            <h1>Lihat User</h1>
+            <h1>Lihat Pengguna</h1>
             <input type="hidden" name="id" value="<?= $id ?>">
             <input type="hidden" name="old_password" value="<?= $user["password"] ?>">
             <div class="mb-3">
-                <label for="username" class="form-label">Username</label>
+                <label for="username" class="form-label">Nama Pengguna</label>
                 <input type="text" class="form-control" id="username" name="username" value="<?= $user["username"] ?>" required>
             </div>
             <div class="mb-3">
-                <label for="password" class="form-label">Password</label>
+                <label for="password" class="form-label">Kata Sandi</label>
                 <input type="password" class="form-control" id="password" name="password" required>
             </div>
             <div class="mb-3">
-                <label for="level" class="form-label">Level</label>
+                <label for="level" class="form-label">Tingkat</label>
                 <select class="form-select" id="level" name="level" required>
                     <option value="admin" <?= $user["level"] == "admin" ? "selected" : "" ?>>admin</option>
                     <option value="keuangan" <?= $user["level"] == "keuangan" ? "selected" : "" ?>>keuangan</option>
@@ -52,8 +52,8 @@
                 </select>
             </div>
             <div class="text-center">
-                <button type="submit" class="btn btn-primary">Simpan</button>
-                <button type="reset" class="btn btn-secondary">Reset</button>
+                <button type="submit" class="btn btn-primary">SIMPAN</button>
+                <button type="reset" class="btn btn-secondary">ULANG</button>
             </div>
         </form>
     </div>

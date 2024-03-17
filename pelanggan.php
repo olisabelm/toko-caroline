@@ -72,7 +72,7 @@
                             <td>
                                 <form action="delete-pelanggan.php" method="POST" onsubmit="return konfirmasi(this)">
                                     <input type="hidden" name="id" value='<?= $pelanggan["id"] ?>'>
-                                    <button type="submit" class="btn btn-danger btn-custom btn-delete">Delete</button>
+                                    <button type="submit" class="btn btn-danger btn-custom btn-delete">Hapus</button>
                                 </form>
                             </td>
                         </tr>

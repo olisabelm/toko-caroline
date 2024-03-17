@@ -18,23 +18,33 @@
 <body>
 	<!--==================== MAIN ====================-->
 	<main class="main">
-         <!--==================== BERANDA ====================-->
+         <!--==================== HOME ====================-->
          <section class="home section" id="home">
 			<div class="home__container container grid">
-				<img src="plant3.png" alt="image" class="home__img">
+				<div class="home__content">
+					<img src="plant3.png" alt="image" class="home__img">
 
-				<div class="home__data">
 					<h1 class="home__title">
-						HEI <br>
-						<span>PLANTS</span> FOR <br>
-						YOUR HOME <br>
+						<span>F</span>
+						<span>-</span>
+						<span>B</span>
 					</h1>
+				</div>
 
-					<p class="home__description">
-						We design ornamental plants for your
-						home in-house for an original style and quality
-						you won't find anywhere else.
-					</p>
+				<div class="home__social">
+					<span class="home__social-text">Follow Us</span>
+
+					<div class="home__social-links">
+						<a href="https://www.instagram.com/" target="_blank" class="home__social-link">
+							<i class="ri-instagram-fill"></i>
+						</a>
+						<a href="https://www.facebook.com/" target="_blank" class="home__social-link">
+							<i class="ri-facebook-fill"></i>
+						</a>
+						<a href="https://www.twitter.com" target="_blank" class="home__social-link">
+							<i class="ri-twitter-fill"></i>
+						</a>
+					</div>
 				</div>
 			</div>
 		 </section>
@@ -48,9 +58,11 @@
 					</h2>
 
 					<p class="new__description">
-						Lorem Ipsum Lorem Ipsum 
-						Lorem Ipsum Lorem Ipsum
-						Lorem Ipsum
+						Menawarkan beragam tanaman berkualitas
+						dalam 3 kategori utama:
+						Tanaman Hias, Tanaman Aromatik, Tanaman Herbal.
+
+						Temukan pilihan terbaik untuk kebutuhan Anda di setiap kategori kami.
 					</p>
 				</div>
 
@@ -74,7 +86,7 @@
 		<!--==================== TOKO ====================-->
 		<section class="shop section" id="shop">
           <h2 class="section__title">
-			THE BEST PLANTS
+			TOP 9 - BEST PLANTS
 		  </h2>  
 		
 		  <div class="shop__container container grid">
@@ -114,13 +126,31 @@
 				<h3 class="shop__title">Rombusa <br> Mini</h3>
 				<span class="shop__price">25.000</span>
 			</article>
+			<article class="shop__card">
+				<img src="plant5.png" alt="image" class="shop__img">
+
+				<h3 class="shop__title">Aglaonema</h3>
+				<span class="shop__price">70.000</span>
+			</article>
+			<article class="shop__card">
+				<img src="plant1.png" alt="image" class="shop__img">
+
+				<h3 class="shop__title">Lili <br> Paris</h3>
+				<span class="shop__price">30.000</span>
+			</article>
+			<article class="shop__card">
+				<img src="plant2.png" alt="image" class="shop__img">
+
+				<h3 class="shop__title">Rombusa <br> Mini</h3>
+				<span class="shop__price">25.000</span>
+			</article>
 		  </div>		
 		</section>
 
 		 <!--==================== BERITA ====================-->
          <section class="care section" id="care">
          	<h2 class="section__title">
-         		LOREM IPSUM <br> LOREM IPSUM
+         		EXPLORING THE BENEFITS <br> OF EACH PLANT CATEGORY
          	</h2>
 
          	<div class="care__container container grid">
@@ -128,7 +158,7 @@
 
          		<ul class="care__list">
          			<li class="care__item">
-         				<h2 class="new__title">Tanaman Hias</h2>
+         				<h1 class="new__title">Tanaman Hias</h1>
 
          				<p>
          				 Tanaman hias memberikan sentuhan 
@@ -138,7 +168,7 @@
          				</p>
          			</li>
          			<li class="care__item">
-         				<h2 class="new__title">Tanaman Herbal</h2>
+         				<h1 class="new__title">Tanaman Herbal</h1>
 
          				<p>
          				 Tanaman herbal telah digunakan 
@@ -148,7 +178,7 @@
          				</p>
          			</li>
          			<li class="care__item">
-         				<h2 class="new__title">Tanaman Aromatik</h2>
+         				<h1 class="new__title">Tanaman Aromatik</h1>
 
          				<p>
          				 Tanaman aromatik memberikan manfaat 
@@ -161,43 +191,76 @@
          		</ul>
          	</div>
          </section>
-
-		<!--==================== KONTAK ====================-->
-		<section class="contact section" id="contact">
-            <h2 class="section__title">
-				CONTACT US
-			</h2>
-
-			<div class="contact__container container grid">
-				<img src="plant1.png" alt="image" class="contact__img">
-
-				<div class="contact__content">
-					<div>
-						<h3 class="contact__title">Social Media</h3>
-
-						<div class="contact__social">
-							<a href="https://www.instagram.com" target="_blank">
-								<i class="ri-instagram-fill"></i>
-							</a>
-
-							<a href="https://www.tiktok.com" target="_blank">
-								<i class="ri-tiktok-fill"></i>
-							</a>
-						</div>
-					</div>
-				
-
-					<div>
-						<h3 class="contact__title">Find Us Here</h3>
-
-						<address class="contact__info">
-							Jalan Beringin Raya Utara 12			
-						</address>
-					</div>
-				</div>
-			</div>
-		</section>
 	</main>
+
+	<!--==================== FOOTER ====================-->
+	<footer class="footer">
+    <div class="footer__container container grid">
+        <div>
+            <p class="footer__description">
+                Choose the best <br> plants for your home.
+            </p>
+        </div>
+
+        <div class="footer__content grid">
+            <div>
+                <h3 class="footer__title">COMPANY</h3>
+
+                <ul class="footer__links">
+                    <li>
+                        <a href="#" class="footer__link">About Us</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="footer__link">Products</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="footer__link">Features</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="footer__title">INFORMATION</h3>
+
+                <ul class="footer__links">
+                    <li>
+                        <a href="#" class="footer__link">Blogs & News</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="footer__link">Contacts US</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="footer__link">FAQs</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="footer__title">SOCIAL MEDIA</h3>
+
+                <div class="footer__social">
+                    <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
+                        <i class="ri-instagram-fill"></i>
+                    </a>
+
+                    <a href="https://www.facebook.com/" target="_blank" class="footer__social-link">
+                        <i class="ri-facebook-fill"></i>
+                    </a>
+
+                    <a href="https://www.twitter.com" target="_blank" class="footer__social-link">
+                        <i class="ri-twitter-fill"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <span class="footer__copy">
+        &#169; All Rights Reserved By Bedimcode
+    </span>
+	</footer>
 
 	 <!--=============== SCROLLREVEAL ===============-->
 	 <script src="scrollreveal.min.js"></script>

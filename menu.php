@@ -146,7 +146,7 @@
     <div class="navbar-nav">
       <ul class="me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="home.php">HOME</a>
+          <a class="nav-link" href="home.php">BERANDA</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="masterDropdown">
@@ -154,14 +154,14 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="masterDropdown">
             <?php if ($_SESSION["level"] == "admin") : ?>
-              <li><a class="dropdown-item" href="user.php">User</a></li>
+              <li><a class="dropdown-item" href="user.php">Pengguna</a></li>
             <?php endif ?>
-            <li><a class="dropdown-item" href="barang.php">Product</a></li>
-            <li><a class="dropdown-item" href="pelanggan.php">Customer</a></li>
+            <li><a class="dropdown-item" href="barang.php">Barang</a></li>
+            <li><a class="dropdown-item" href="pelanggan.php">Pelanggan</a></li>
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="penjualan.php">SALE</a>
+          <a class="nav-link" href="penjualan.php">PENJUALAN</a>
         </li>
       </ul>
     </div>
@@ -169,10 +169,10 @@
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0"> 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="userDropdown">
-            Selamat datang, <?= $_SESSION["username"] ?>!
+            Hai! Selamat datang, <?= $_SESSION["username"] ?>!
           </a>
           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-            <li><a class="dropdown-item" href="profil.php">Profile</a></li>
+            <li><a class="dropdown-item" href="profil.php">Profil</a></li>
             <li><a class="dropdown-item" href="logout.php">Log out</a></li>
           </ul>
         </li>

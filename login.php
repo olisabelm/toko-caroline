@@ -11,7 +11,7 @@
     <div class="form-box">
         <div class="form-value">
         <form action="validasi.php" method="POST" class="login-form">
-            <h2>Welcome!</h2>
+            <h2>Selamat datang!</h2>
             <div class="form-group">
               <input type="text" id="username" name="username" spellcheck="false" required placeholder="Username" autocomplete="off" class="input-field" />
               <label for="username">Username</label>

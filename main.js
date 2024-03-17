@@ -7,7 +7,7 @@ const sr = ScrollReveal({
   reset: true, // Animation repeat
 });
 
-sr.reveal(".home__img, .new__data, .care__img, .contact__content");
+sr.reveal(".home__img, .new__data, .care__img, .contact__content, .footer");
 sr.reveal(".home__data, .care__list, .contact__img", { delay: 500 });
 sr.reveal(".new__card", { delay: 500, interval: 100 });
 sr.reveal(".shop__card", { interval: 100 });
