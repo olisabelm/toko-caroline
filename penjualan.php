@@ -38,16 +38,14 @@
 
     <main class="table">
         <section class="table__header">
-        <h1>Data Penjualan</h1>
-        <div class="button-container">
-        <form action="new-penjualan.php" method="GET">
-            <button type="submit" class="btn btn-primary btn-custom btn-view">
-                <span class="btn-text">Tambah</span>
-            </button>
-        </form>
-         <button onclick="cetak()" class="btn btn-primary btn-custom btn-view">
-                    <a target="_blank" href="cetak-barang.php" class="btn-text">Cetak</a>
-                </button>
+            <h1>Data Penjualan</h1>
+            <div class="button-container">
+                <form action="new-penjualan.php" method="GET">
+                    <button type="submit" class="btn btn-primary btn-custom btn-view">
+                        <span class="btn-text">Tambah</span>
+                    </button>
+                </form>
+                 <button onclick="cetaklaporan()" class="btn btn-primary btn-custom btn-view">Cetak</button>
             </div>
         </section>
         <section class="table__body">
@@ -81,12 +79,6 @@
                                 <button type="submit" class="btn btn-primary btn-custom btn-view">Lihat</button>
                             </form>
                         </td>
-                        <td>
-                            <form action="delete-penjualan.php" method="POST" onsubmit="return konfirmasi(this)">
-                                <input type="hidden" name="id" value='<?= $penjualan["id"] ?>'>
-                                <button type="submit"  class="btn btn-danger btn-custom btn-delete">Hapus</button>
-                            </form>
-                        </td>
                     </tr>
                     <?php $i++; ?>
                 <?php endwhile ?>
@@ -95,6 +87,10 @@
     </div>
 
     <script>
+
+        function cetaklaporan() {
+             window.print();
+        }
 
         function konfirmasi(form) {
             formData = new FormData(form);

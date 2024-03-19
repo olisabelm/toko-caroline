@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
-    <title>Data Pwngguna</title>
+    <title>Data Pengguna</title>
     <link rel="stylesheet" href="tablestyle.css">
 </head>
 
@@ -40,9 +40,7 @@
                         <span class="btn-text">Tambah</span>
                     </button>
                 </form>
-                <button onclick="cetak()" class="btn btn-primary btn-custom btn-view">
-                    <a target="_blank" href="cetak-barang.php" class="btn-text">Cetak</a>
-                </button>
+                <button onclick="cetaklaporan()" class="btn btn-primary btn-custom btn-view">Cetak</button>
             </div>
         </section>
         <section class="table__body">
@@ -87,7 +85,8 @@
     </main>
     
     <script>
-        function cetak() {
+        
+        function cetaklaporan() {
              window.print();
         }
 

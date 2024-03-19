@@ -26,7 +26,7 @@
     }
 
     .navbar {
-      background-color: rgba(83, 141, 34, 0.8); /* Warna latar belakang hijau muda dengan transparansi */
+      background-color: rgba(83, 141, 34, 0.8);
       padding: 10px 20px;
       display: flex;
       justify-content: space-between;
@@ -51,7 +51,7 @@
     .navbar-nav,
     .navbar-text {
       display: flex;
-      align-items: center; /* Menyamakan vertikal align */
+      align-items: center; 
     }
 
     .navbar-nav {
@@ -69,7 +69,7 @@
     .nav-link {
       text-decoration: none;
       font-size: 15px;
-      padding: 5px 10px; /* Menambahkan padding untuk menyesuaikan ruang */
+      padding: 5px 10px; 
     }
 
     .nav-link:hover {
@@ -169,7 +169,7 @@
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0"> 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="userDropdown">
-            Hai! Selamat datang, <?= $_SESSION["username"] ?>!
+            Selamat datang, <?= $_SESSION["username"] ?>!
           </a>
           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
             <li><a class="dropdown-item" href="profil.php">Profil</a></li>

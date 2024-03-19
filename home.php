@@ -92,21 +92,21 @@ session_start();
 
 			<div class="shop__container container grid">
 				<article class="shop__card">
-					<img src="plant2.png" alt="image" class="shop__img">
+					<img src="tanamanhias1.png" alt="image" class="shop__img">
 
-					<h3 class="shop__title">Palem <br> Merah</h3>
+					<h3 class="shop__title">Alocasia <br> Odora</h3>
 					<span class="shop__price">50.000</span>
 				</article>
 				<article class="shop__card">
-					<img src="plant3.png" alt="image" class="shop__img">
+					<img src="tanamanhias2.png" alt="image" class="shop__img">
 
-					<h3 class="shop__title">Lidah <br> Mertua</h3>
-					<span class="shop__price">45.000</span>
+					<h3 class="shop__title">Monstera</h3>
+					<span class="shop__price">100.000</span>
 				</article>
 				<article class="shop__card">
-					<img src="plant4.png" alt="image" class="shop__img">
+					<img src="tanamanhias3.png" alt="image" class="shop__img">
 
-					<h3 class="shop__title">Kuping <br> Gajah</h3>
+					<h3 class="shop__title">Fiddle</h3>
 					<span class="shop__price">65.000</span>
 				</article>
 				<article class="shop__card">

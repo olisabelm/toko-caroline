@@ -10,7 +10,7 @@
     <section>
     <div class="form-box">
         <div class="form-value">
-        <form action="validasi.php" method="POST" class="login-form">
+        <form action="validasi.php" method="POST" class="login-form" onsubmit="return konfirmasi(this)">
             <h2>Selamat datang!</h2>
             <div class="form-group">
               <input type="text" id="username" name="username" spellcheck="false" required placeholder="Username" autocomplete="off" class="input-field" />
