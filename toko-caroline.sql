@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 17, 2024 at 09:02 PM
+-- Generation Time: Mar 20, 2024 at 08:15 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -42,15 +42,20 @@ CREATE TABLE `barang` (
 --
 
 INSERT INTO `barang` (`id`, `nama`, `kategori`, `stok`, `harga`, `created_at`, `updated_at`) VALUES
-(2, 'Lidah mertua', 'tanaman hias', 10, 20000, '2024-01-25 01:10:40', '2024-03-03 10:13:33'),
+(2, 'Lidah mertua', 'tanaman hias', 8, 20000, '2024-01-25 01:10:40', '2024-03-20 18:51:07'),
 (3, 'Monstera', 'tanaman hias', 5, 100000, '2024-01-25 01:10:40', '2024-03-03 10:13:42'),
 (4, 'Rombusa Mini', 'tanaman hias', 10, 50000, '2024-01-25 01:10:40', '2024-03-03 10:13:50'),
 (5, 'Lili Paris', 'tanaman hias', 5, 30000, '2024-01-25 01:10:40', '2024-03-03 10:13:59'),
-(8, 'Philodendron', 'tanaman hias', 10, 75000, '2024-02-15 17:04:48', '2024-03-03 10:14:05'),
 (10, 'Aglaonema', 'tanaman hias', 10, 20000, '2024-02-15 17:04:48', '2024-03-03 10:14:41'),
 (11, 'Suplir', 'tanaman hias', 20, 55000, '2024-02-15 17:04:48', '2024-03-03 10:14:53'),
-(14, 'Mint', 'tanaman aromatik', 50, 35000, '2024-03-03 09:32:41', '2024-03-03 10:15:02'),
-(15, 'Rosemary', 'tanaman aromatik', 20, 40000, '2024-03-03 10:22:39', NULL);
+(17, 'Kunyit', 'tanaman herbal', 10, 20000, '2024-03-20 16:33:23', NULL),
+(18, 'Kencur', 'tanaman herbal', 50, 15000, '2024-03-20 16:33:52', NULL),
+(19, 'Ginseng', 'tanaman herbal', 30, 35000, '2024-03-20 16:34:46', NULL),
+(20, 'Chamomile', 'tanaman aromatik', 25, 35000, '2024-03-20 16:35:11', NULL),
+(21, 'Lavender', 'tanaman aromatik', 45, 40000, '2024-03-20 16:35:38', NULL),
+(22, 'Cengkeh', 'tanaman aromatik', 30, 20000, '2024-03-20 16:36:01', NULL),
+(23, 'Fiddle', 'tanaman hias', 50, 65000, '2024-03-20 16:36:46', NULL),
+(24, 'Alocasia Odara', 'tanaman hias', 20, 50000, '2024-03-20 16:37:06', '2024-03-20 18:57:04');
 
 -- --------------------------------------------------------
 
@@ -77,7 +82,8 @@ INSERT INTO `pelanggan` (`id`, `nama`, `alamat`, `nomor_telepon`, `created_at`, 
 (3, 'lily', 'Apartemen Melati Tower 3A, Lantai 15, Jl. Kenanga No. 78, Kota Makmur', '083844334567', '2024-02-18 10:18:07', NULL),
 (4, 'jasmine', 'Jl. Anggrek No. 101, Apartemen Harmoni, Jakarta Selatan', '085612345678', '2024-02-18 10:18:07', NULL),
 (5, 'orchid ', 'Jalan Merpati No. 5, Surabaya', '087798765432', '2024-02-18 10:18:07', NULL),
-(6, 'dahlia', 'Jl. Kenari No. 15, Denpasar', '089634567890', '2024-02-18 10:18:07', NULL);
+(6, 'dahlia', 'Jl. Kenari No. 15, Denpasar', '089634567890', '2024-02-18 10:18:07', NULL),
+(8, 'Nadine', 'Jalan Pasirkoja 201', '080907060504', '2024-03-20 16:41:58', NULL);
 
 -- --------------------------------------------------------
 
@@ -105,8 +111,10 @@ INSERT INTO `penjualan` (`id`, `id_barang`, `id_pelanggan`, `jumlah`, `total_har
 (2, 2, 5, 5, 100000, 2, '2024-03-10 07:12:00', NULL),
 (3, 4, 4, 5, 250000, 5, '2024-03-10 07:12:00', NULL),
 (4, 5, 3, 9, 270000, 4, '2024-03-10 07:12:00', NULL),
-(5, 8, 2, 5, 375000, 3, '2024-03-10 07:12:00', NULL),
-(6, 11, 1, 2, 110000, 2, '2024-03-10 07:12:00', '2024-03-10 07:13:35');
+(6, 11, 1, 2, 110000, 2, '2024-03-10 07:12:00', '2024-03-10 07:13:35'),
+(21, 17, 8, 2, 40000, 1, '2024-03-20 18:25:16', NULL),
+(26, 2, 1, 2, 40000, 2, '2024-03-20 18:51:06', NULL),
+(27, 24, 8, 30, 1500000, 2, '2024-03-20 18:57:04', NULL);
 
 -- --------------------------------------------------------
 
@@ -129,7 +137,7 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `username`, `password`, `level`, `created_at`, `updated_at`) VALUES
 (1, 'cici', '$2a$12$iMJZjnl5ve4Kcxf97vXVMOz7dxv94C6hUWga8J1AwosdclyIGuJPy', 'logistik', '2024-01-25 01:07:04', NULL),
-(2, 'nana', '$2a$12$UBmaRoTAND4gJPHMOwDxveUFzaMU9EVe4hyYwjvXr/BWDUePrgyn2', 'admin', '2024-01-25 01:07:04', '2024-02-24 04:13:44'),
+(2, 'nana', '$2y$10$rzgqvzVZ7UX7r..beRWzTOTOpTmhgAGNzeUI6ieLDXaUQ9JlkIJim', 'admin', '2024-01-25 01:07:04', '2024-03-20 18:28:18'),
 (3, 'nini', '$2a$12$bKKLhL7sxsXjRioXiMRxm.x8oydLNGh89xnhRGjIsUh/iJ18s6mee', 'keuangan', '2024-01-25 01:07:04', NULL),
 (4, 'coco', '$2y$10$bYq7uzQdPBd8f0n4qb6tGOuWL9u1VVt/wg8oA5exrOU9DtfI8pOJe', 'admin', '2024-01-25 01:07:04', '2024-03-17 14:27:20'),
 (5, 'nene', '$2a$12$WbSLRWycU/I1FGOFYsEcrehrC/htvflUFudcLUj4cVoEshcsWLifC', 'logistik', '2024-01-25 01:07:04', NULL),
@@ -176,25 +184,25 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `barang`
 --
 ALTER TABLE `barang`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `pelanggan`
 --
 ALTER TABLE `pelanggan`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `penjualan`
 --
 ALTER TABLE `penjualan`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- Constraints for dumped tables

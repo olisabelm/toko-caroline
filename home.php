@@ -54,9 +54,9 @@ session_start();
 		<section class="new section" id="new">
 			<div class="new__container container grid">
 				<div class="new__data">
-					<h2 class="section__title">
-						NEW PLANTS FOR <br> YOUR HOME
-					</h2>
+					<h1 class="section__title">
+					FEATURED CATEGORY
+					</h1>
 
 					<p class="new__description">
 						Menawarkan beragam tanaman berkualitas
@@ -73,11 +73,11 @@ session_start();
 						<h2 class="new__title">Tanaman Hias</h2>
 					</article>
 					<article class="new__card">
-						<img src="plant5.png" alt="image" class="new__img">
+						<img src="tanamanaromatik2.png" alt="image" class="new__img">
 						<h2 class="new__title">Tanaman Aromatik</h2>
 					</article>
 					<article class="new__card">
-						<img src="plant1.png" alt="image" class="new__img">
+						<img src="tanamanherbal1.png" alt="image" class="new__img">
 						<h2 class="new__title">Tanaman Herbal</h2>
 					</article>
 				</div>
@@ -148,120 +148,13 @@ session_start();
 			</div>
 		</section>
 
-		<!--==================== BERITA ====================-->
-		<section class="care section" id="care">
-			<h2 class="section__title">
-				EXPLORING THE BENEFITS <br> OF EACH PLANT CATEGORY
-			</h2>
-
-			<div class="care__container container grid">
-				<img src="plant5.png" alt="image" class="care__img">
-
-				<ul class="care__list">
-					<li class="care__item">
-						<h1 class="new__title">Tanaman Hias</h1>
-
-						<p>
-							Tanaman hias memberikan sentuhan
-							alami dan keindahan visual pada ruangan.
-							Dapat membuat ruangan terlihat
-							lebih hidup dan menyegarkan.
-						</p>
-					</li>
-					<li class="care__item">
-						<h1 class="new__title">Tanaman Herbal</h1>
-
-						<p>
-							Tanaman herbal telah digunakan
-							selama ribuan tahun dalam
-							pengobatan tradisional di berbagai
-							budaya di seluruh dunia.
-						</p>
-					</li>
-					<li class="care__item">
-						<h1 class="new__title">Tanaman Aromatik</h1>
-
-						<p>
-							Tanaman aromatik memberikan manfaat
-							sebagai penyedap makanan alami,
-							pengusir serangga, pengobatan alternatif,
-							sumber aroma menenangkan, dan
-							bahan untuk produk perawatan tubuh serta minuman.
-						</p>
-					</li>
-				</ul>
-			</div>
-		</section>
-	</main>
-
 	<!--==================== FOOTER ====================-->
 	<footer class="footer">
-		<div class="footer__container container grid">
-			<div>
-				<p class="footer__description">
-					Choose the best <br> plants for your home.
-				</p>
-			</div>
-
-			<div class="footer__content grid">
-				<div>
-					<h3 class="footer__title">COMPANY</h3>
-
-					<ul class="footer__links">
-						<li>
-							<a href="#" class="footer__link">About Us</a>
-						</li>
-
-						<li>
-							<a href="#" class="footer__link">Products</a>
-						</li>
-
-						<li>
-							<a href="#" class="footer__link">Features</a>
-						</li>
-					</ul>
-				</div>
-				<div>
-					<h3 class="footer__title">INFORMATION</h3>
-
-					<ul class="footer__links">
-						<li>
-							<a href="#" class="footer__link">Blogs & News</a>
-						</li>
-
-						<li>
-							<a href="#" class="footer__link">Contacts US</a>
-						</li>
-
-						<li>
-							<a href="#" class="footer__link">FAQs</a>
-						</li>
-					</ul>
-				</div>
-				<div>
-					<h3 class="footer__title">SOCIAL MEDIA</h3>
-
-					<div class="footer__social">
-						<a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
-							<i class="ri-instagram-fill"></i>
-						</a>
-
-						<a href="https://www.facebook.com/" target="_blank" class="footer__social-link">
-							<i class="ri-facebook-fill"></i>
-						</a>
-
-						<a href="https://www.twitter.com" target="_blank" class="footer__social-link">
-							<i class="ri-twitter-fill"></i>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<span class="footer__copy">
-			&#169; All Rights Reserved By Bedimcode
-		</span>
-	</footer>
+    
+    <span class="footer__copy" style="text-align: center;">
+        © 2024 FreshBox. All Rights Reserved.
+    </span>
+</footer>
 
 	<!--=============== SCROLLREVEAL ===============-->
 	<script src="scrollreveal.min.js"></script>

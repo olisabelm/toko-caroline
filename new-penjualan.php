@@ -42,8 +42,8 @@
                 </select>
             </div>
             <div class="mb-3">
-                <label for="nama_pelanggan">Nama Pelanggan</label>
-                <input type="text" class="form-control" id="nama_pelanggan" name="nama_pelanggan" required>
+                <label for="id_pelanggan">Id Pelanggan</label>
+                <input type="text" class="form-control" id="pelanggan" name="id_pelanggan" required>
             </div>
             <div class="mb-3">
                 <label for="jumlah">Jumlah</label>

@@ -16,10 +16,6 @@
 <?php include "menu.php"; ?>
 
 </header>
-
-<br>
-<br>
-<br>
 <body>
 
     <?php
@@ -55,6 +51,7 @@
                     </tr>
                 </thead>
                 <tbody>
+
                     <?php $i = 1; ?>
                     <?php while ($barang = mysqli_fetch_array($query)) : ?>
                         <tr>
